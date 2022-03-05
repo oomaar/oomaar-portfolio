@@ -1,3 +1,10 @@
+import { NextHead } from "../global/NextHead";
+
 export default function Home() {
-  return <h1>My page</h1>;
+  return (
+    <div>
+      <NextHead title="Omar's Resume" />
+      My page
+    </div>
+  );
 }
