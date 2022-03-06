@@ -9,11 +9,10 @@ const addStyleSheets = (tagName) => {
   head.appendChild(link);
 };
 
+// Google Fonts CDN
 addStyleSheets(
   "https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@400;700&display=swap"
 );
 
-{
-  /* <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
-}
+// Google Icons CDN
+addStyleSheets("https://fonts.googleapis.com/css2?family=Material+Icons");

@@ -18,7 +18,7 @@ export const NextHead = ({ title }) => {
       />
 
       {/* Links: Style-Sheets */}
-      <style src="./links.js" type="text/javascript" defer></style>
+      <script src="./links.js" type="text/javascript" defer></script>
     </Head>
   );
 };
