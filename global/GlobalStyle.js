@@ -86,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    /* font-family: ${({ theme }) => theme.typoFamily.bodyFont}; */
+    font-family: ${({ theme }) => theme.typoFamily.bodyFont};
   }
 
   ul {
