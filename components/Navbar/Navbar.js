@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Nav,
   Logo,
@@ -8,13 +7,11 @@ import {
   NavButtonLine3,
 } from "./styledNavbar";
 
-export const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
+export const Navbar = ({ showMenu, setShowMenu }) => {
   return (
     <Nav>
       <Logo>Omar H.</Logo>
-      <NavButton onClick={() => setShowMenu((state) => !state)}>
+      <NavButton onClick={() => setShowMenu(true)}>
         <NavButtonLine1 showMenu={showMenu}></NavButtonLine1>
         <NavButtonLine2 showMenu={showMenu}></NavButtonLine2>
         <NavButtonLine3 showMenu={showMenu}></NavButtonLine3>
