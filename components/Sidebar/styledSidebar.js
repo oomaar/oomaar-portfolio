@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mdScreen } from "../../global/GlobalStyle";
+import { lgScreen, mdScreen } from "../../global/GlobalStyle";
 
 export const SidebarContainer = styled.div`
   position: fixed;
@@ -15,6 +15,10 @@ export const SidebarContainer = styled.div`
   z-index: ${({ theme }) => theme.zIndex.zMenu};
   color: ${({ theme }) => theme.lightColors.titleColor};
   transition: all 1s ease-in;
+
+  @media screen and (max-width: ${lgScreen}) {
+    width: 100%;
+  }
 `;
 
 export const CrossIcon = styled.div`
@@ -26,11 +30,6 @@ export const CrossIcon = styled.div`
   cursor: pointer;
   margin-left: auto;
   cursor: pointer;
-
-  @media screen and (max-width: ${mdScreen}) {
-    width: 30px;
-    height: 30px;
-  }
 `;
 
 export const CrossLine1 = styled.div`
@@ -47,4 +46,102 @@ export const CrossLine2 = styled.div`
   border-radius: 1rem;
   background-color: #fff;
   transform: translateX(-30px) rotate(-45deg);
+`;
+
+export const SidebarList = styled.ul`
+  margin: 0;
+  padding-top: 25px;
+  list-style: none;
+`;
+
+export const SidebarListItem = styled.li`
+  position: relative;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 2rem auto;
+  width: max-content;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    transition: color 0ms 200ms;
+
+    ::before {
+      position: absolute;
+      content: attr(data-text);
+      height: calc(0.5em);
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      color: #fff;
+      transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+      user-select: none;
+    }
+
+    ::after {
+      position: absolute;
+      content: attr(data-text);
+      height: calc(0.5em);
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      color: #fff;
+      transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+      user-select: none;
+      bottom: 0;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  :hover > span {
+    color: transparent;
+    user-select: none;
+    transition-delay: 0ms;
+  }
+
+  :hover > span {
+    ::after {
+      color: #fff;
+      transform: skewX(15deg);
+    }
+
+    ::before {
+      color: #fff;
+      transform: skewX(15deg);
+    }
+  }
+
+  :hover span {
+    ::before {
+      color: ${({ theme }) => theme.lightColors.primaryColor};
+      transform: skewX(15deg);
+    }
+
+    ::after {
+      color: ${({ theme }) => theme.lightColors.primaryColor};
+      transform: skewX(15deg);
+    }
+  }
+
+  ::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    left: -5%;
+    top: calc(50% - 1px);
+    height: 2px;
+    transform: scale(0);
+    background-color: ${({ theme }) => theme.lightColors.textColor};
+    border-radius: 20px;
+    z-index: 1;
+    transition: transform 200ms ease-in-out;
+  }
+
+  :hover::before {
+    transform: scale(1);
+  }
 `;
