@@ -1,0 +1,33 @@
+{
+  "navbar": {
+    "name": "Omar H."
+  },
+  "sidebar": {
+    "links": [
+      {
+        "id": "nav-link-1",
+        "title": "Home"
+      },
+      {
+        "id": "nav-link-2",
+        "title": "About"
+      },
+      {
+        "id": "nav-link-3",
+        "title": "Skills"
+      },
+      {
+        "id": "nav-link-4",
+        "title": "Experience"
+      },
+      {
+        "id": "nav-link-4",
+        "title": "Projects"
+      },
+      {
+        "id": "nav-link-5",
+        "title": "Contact"
+      }
+    ]
+  }
+}
