@@ -29,5 +29,9 @@
         "title": "Contact"
       }
     ]
+  },
+  "hero": {
+    "profession": "Web Developer",
+    "name": "Omar Hassan"
   }
 }
