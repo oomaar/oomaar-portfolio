@@ -1,13 +1,19 @@
 import styled from "styled-components";
-import { mdScreen, xsScreen } from "../../global/GlobalStyle";
+import { mdScreen, xsScreen, navbarHeight } from "../../global/GlobalStyle";
 
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 3rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: ${({ theme }) => theme.zIndex.zNav};
+  color: #fff;
+  border-bottom: 1px solid ${({ theme }) => theme.lightColors.borderBlack};
+  height: ${navbarHeight};
 
   @media screen and (max-width: ${xsScreen}) {
     padding: 0.5rem 1rem;
@@ -41,7 +47,7 @@ export const NavButton = styled.div`
 export const NavButtonLine1 = styled.div`
   width: 3px;
   height: 30px;
-  background-color: #000;
+  background-color: #fff;
   transform: ${({ showMenu }) =>
     showMenu ? "translateY(100px)" : "translateY(0)"};
   transition: all 0.5s ease-in;
@@ -56,7 +62,7 @@ export const NavButtonLine2 = styled.div`
   height: 30px;
   transform: ${({ showMenu }) =>
     showMenu ? "translateY(100px)" : "translateY(0)"};
-  background-color: #000;
+  background-color: #fff;
   transition: all 0.7s ease-in;
 
   @media screen and (max-width: ${mdScreen}) {
@@ -67,7 +73,7 @@ export const NavButtonLine2 = styled.div`
 export const NavButtonLine3 = styled.div`
   width: 3px;
   height: 30px;
-  background-color: #000;
+  background-color: #fff;
   transform: ${({ showMenu }) =>
     showMenu ? "translateY(100px)" : "translateY(0)"};
   transition: all 0.9s ease-in;

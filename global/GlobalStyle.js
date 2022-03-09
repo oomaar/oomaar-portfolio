@@ -1,5 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+// Navbar Height
+export const navbarHeight = `6.25rem`;
+
 // View Ports
 export const xlScreen = `1024px`;
 export const lgScreen = `768px`;
