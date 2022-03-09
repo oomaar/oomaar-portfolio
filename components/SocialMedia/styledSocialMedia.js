@@ -15,5 +15,4 @@ export const SocialMediaContainer = styled.div`
 export const SocialMediaIcon = styled.div`
   width: 20px;
   cursor: pointer;
-  filter: invert(1);
 `;
