@@ -125,4 +125,9 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background-color: ${({ theme }) => theme.lightColors.textColor};
   }
+
+  ::selection {
+    color: #000;
+    background-color: ${({ theme }) => theme.lightColors.primaryColor};
+  }
 `;
