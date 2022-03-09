@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Hero, Navbar, Sidebar } from "../components";
+import { Hero, Navbar, Sidebar, SocialMedia } from "../components";
 import { NextHead } from "../global/NextHead";
 import portfolioData from "../data/portfolioData.json";
 
@@ -21,6 +21,7 @@ export default function Home() {
         setShowMenu={setShowMenu}
       />
       <Hero data={portfolioData.hero} />
+      <SocialMedia data={portfolioData.socialMedia} />
     </div>
   );
 }
