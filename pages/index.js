@@ -3,6 +3,7 @@ import {
   About,
   Hero,
   Navbar,
+  Projects,
   Qualification,
   Sidebar,
   Skills,
@@ -33,6 +34,7 @@ export default function Home() {
       <About />
       <Qualification />
       <Skills />
+      <Projects />
     </div>
   );
 }
