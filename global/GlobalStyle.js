@@ -49,6 +49,7 @@ export const theme = {
 // Reusable Classes
 export const Section = styled.section`
   padding: 2rem 0 4rem;
+  height: 100vh;
 
   @media screen and (min-width: ${lgScreen}) {
     padding: 6rem 0 2rem;
