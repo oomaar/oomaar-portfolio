@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { About, Hero, Navbar, Sidebar, SocialMedia } from "../components";
+import {
+  About,
+  Hero,
+  Navbar,
+  Qualification,
+  Sidebar,
+  SocialMedia,
+} from "../components";
 import { NextHead } from "../global/NextHead";
 import portfolioData from "../data/portfolioData.json";
 
@@ -23,6 +30,7 @@ export default function Home() {
       <Hero data={portfolioData.hero} />
       <SocialMedia data={portfolioData.socialMedia} />
       <About />
+      <Qualification />
     </div>
   );
 }
