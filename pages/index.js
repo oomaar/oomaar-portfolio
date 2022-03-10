@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   About,
+  Contact,
   Hero,
   Navbar,
   Projects,
@@ -35,6 +36,7 @@ export default function Home() {
       <Qualification />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   );
 }
