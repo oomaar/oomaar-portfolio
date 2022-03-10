@@ -5,6 +5,7 @@ import {
   Navbar,
   Qualification,
   Sidebar,
+  Skills,
   SocialMedia,
 } from "../components";
 import { NextHead } from "../global/NextHead";
@@ -31,6 +32,7 @@ export default function Home() {
       <SocialMedia data={portfolioData.socialMedia} />
       <About />
       <Qualification />
+      <Skills />
     </div>
   );
 }
