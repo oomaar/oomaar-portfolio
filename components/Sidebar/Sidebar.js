@@ -10,9 +10,11 @@ import {
 export const Sidebar = ({ showMenu, setShowMenu, data }) => {
   const sidebarLinks = data.links.map((link) => (
     <SidebarListItem className="list-item" key={link.id}>
-      <span className="split-text" data-text={link.title}>
-        {link.title}
-      </span>
+      <a href={link.href}>
+        <span className="split-text" data-text={link.title}>
+          {link.title}
+        </span>
+      </a>
     </SidebarListItem>
   ));
 

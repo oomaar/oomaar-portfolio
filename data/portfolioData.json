@@ -6,27 +6,33 @@
     "links": [
       {
         "id": "nav-link-1",
-        "title": "Home"
+        "title": "Home",
+        "href": "#home"
       },
       {
         "id": "nav-link-2",
-        "title": "About"
+        "title": "About",
+        "href": "#about"
       },
       {
         "id": "nav-link-3",
-        "title": "Qualification"
+        "title": "Qualification",
+        "href": "#qualification"
       },
       {
         "id": "nav-link-4",
-        "title": "Skills"
+        "title": "Skills",
+        "href": "#skills"
       },
       {
         "id": "nav-link-5",
-        "title": "Projects"
+        "title": "Projects",
+        "href": "#projects"
       },
       {
         "id": "nav-link-6",
-        "title": "Contact"
+        "title": "Contact",
+        "href": "#contact"
       }
     ]
   },
