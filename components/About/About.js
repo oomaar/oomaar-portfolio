@@ -1,12 +1,49 @@
-import { Container, Section } from "../../global/GlobalStyle";
-import { AboutContainer } from "./styledAbout";
+import { Container, Section, SectionTitle } from "../../global/GlobalStyle";
+import {
+  AboutContainer,
+  AboutLeftContainer,
+  AboutImage,
+  AboutExperience,
+  AboutRightContainer,
+  AboutText,
+  AboutSkillsList,
+  AboutSkillsListItem,
+  AboutButton,
+} from "./styledAbout";
 
-export const About = () => {
+export const About = ({ data }) => {
+  const listItems = data.skills.map((skill) => (
+    <AboutSkillsListItem key={skill.id}>{skill.skill}</AboutSkillsListItem>
+  ));
+
   return (
     <Section id="about">
       <Container>
         <AboutContainer>
-          <h1>TODO: About</h1>
+          <AboutLeftContainer>
+            <AboutImage>
+              <img src={data.img} alt="Simply Me" />
+              <AboutExperience>
+                <span>{data.years}</span>
+                <p>
+                  <strong>Years</strong>
+                  <strong>of</strong>
+                  <strong>Experience</strong>
+                </p>
+              </AboutExperience>
+            </AboutImage>
+          </AboutLeftContainer>
+          <AboutRightContainer>
+            <SectionTitle>About Me</SectionTitle>
+            <AboutText>
+              {data.experiencePartA} <span>{data.experiencePartB}</span>{" "}
+              {data.experiencePartC}
+            </AboutText>
+            <AboutSkillsList>{listItems}</AboutSkillsList>
+            <AboutButton download={true} href={data.cv}>
+              Download CV
+            </AboutButton>
+          </AboutRightContainer>
         </AboutContainer>
       </Container>
     </Section>
