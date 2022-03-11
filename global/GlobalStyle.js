@@ -50,6 +50,7 @@ export const theme = {
 export const Section = styled.section`
   padding: 2rem 0 4rem;
   height: 100vh;
+  margin: 4.5rem 0;
 
   @media screen and (min-width: ${lgScreen}) {
     padding: 6rem 0 2rem;
@@ -61,7 +62,7 @@ export const SectionTitle = styled.h1`
   text-align: center;
 
   @media screen and (max-width: 1024px) {
-    font-size: ${({ theme }) => theme.typography.smallTitleFont};
+    font-size: ${({ theme }) => theme.typo.smallTitleFont};
   }
 `;
 
