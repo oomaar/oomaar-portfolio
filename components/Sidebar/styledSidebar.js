@@ -1,5 +1,18 @@
 import styled from "styled-components";
-import { lgScreen, mdScreen } from "../../global/GlobalStyle";
+import { lgScreen } from "../../global/GlobalStyle";
+
+export const OverLay = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: ${({ theme }) => theme.zIndex.zMenu};
+  width: 100%;
+  transform: ${({ showMenu }) =>
+    showMenu ? "translateX(0)" : "translateX(-2000px)"};
+  transition: all 0.5s ease-in;
+`;
 
 export const SidebarContainer = styled.div`
   position: fixed;
@@ -9,12 +22,12 @@ export const SidebarContainer = styled.div`
   height: 100vh;
   width: 564px;
   transform: ${({ showMenu }) =>
-    showMenu ? "translateX(0)" : "translateX(1000px)"};
+    showMenu ? "translateX(0)" : "translateX(2000px)"};
   padding: 1rem;
   background-color: ${({ theme }) => theme.lightColors.menuColor};
   z-index: ${({ theme }) => theme.zIndex.zMenu};
   color: ${({ theme }) => theme.lightColors.titleColor};
-  transition: all 1s ease-in;
+  transition: all 0.5s ease-in;
 
   @media screen and (max-width: ${lgScreen}) {
     width: 100%;

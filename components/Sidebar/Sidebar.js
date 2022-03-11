@@ -5,6 +5,7 @@ import {
   CrossLine2,
   SidebarList,
   SidebarListItem,
+  OverLay,
 } from "./styledSidebar";
 
 export const Sidebar = ({ showMenu, setShowMenu, data }) => {
@@ -19,12 +20,15 @@ export const Sidebar = ({ showMenu, setShowMenu, data }) => {
   ));
 
   return (
-    <SidebarContainer showMenu={showMenu}>
-      <CrossIcon onClick={() => setShowMenu(false)}>
-        <CrossLine1></CrossLine1>
-        <CrossLine2></CrossLine2>
-      </CrossIcon>
-      <SidebarList>{sidebarLinks}</SidebarList>
-    </SidebarContainer>
+    <>
+      <OverLay showMenu={showMenu} onClick={() => setShowMenu(false)} />
+      <SidebarContainer showMenu={showMenu}>
+        <CrossIcon onClick={() => setShowMenu(false)}>
+          <CrossLine1></CrossLine1>
+          <CrossLine2></CrossLine2>
+        </CrossIcon>
+        <SidebarList>{sidebarLinks}</SidebarList>
+      </SidebarContainer>
+    </>
   );
 };
