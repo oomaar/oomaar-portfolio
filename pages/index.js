@@ -12,6 +12,7 @@ import {
 } from "../components";
 import { NextHead } from "../global/NextHead";
 import portfolioData from "../data/portfolioData.json";
+import ReactPageScroller from "react-page-scroller";
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -30,13 +31,15 @@ export default function Home() {
         showMenu={showMenu}
         setShowMenu={setShowMenu}
       />
-      <Hero data={portfolioData.hero} />
       <SocialMedia data={portfolioData.socialMedia} />
-      <About data={portfolioData.about} />
-      <Qualification data={portfolioData.qualification} />
-      <Skills />
-      <Projects />
-      <Contact />
+      <ReactPageScroller animationTimer={800}>
+        <Hero data={portfolioData.hero} />
+        <About data={portfolioData.about} />
+        <Qualification data={portfolioData.qualification} />
+        <Skills />
+        <Projects />
+        <Contact />
+      </ReactPageScroller>
     </div>
   );
 }
