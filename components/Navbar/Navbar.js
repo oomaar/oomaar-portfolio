@@ -12,7 +12,7 @@ export const Navbar = ({ showMenu, setShowMenu, data }) => {
   const [darkNav, setDarkNav] = useState(false);
 
   const handleDarkNav = () =>
-    window.scrollY > 900 ? setDarkNav(true) : setDarkNav(false);
+    window.scrollY > 500 ? setDarkNav(true) : setDarkNav(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleDarkNav);
