@@ -33,7 +33,7 @@ export default function Home() {
       <Hero data={portfolioData.hero} />
       <SocialMedia data={portfolioData.socialMedia} />
       <About data={portfolioData.about} />
-      <Qualification />
+      <Qualification data={portfolioData.qualification} />
       <Skills />
       <Projects />
       <Contact />
