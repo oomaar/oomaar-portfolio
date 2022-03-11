@@ -4,9 +4,11 @@ import { lgScreen } from "../../global/GlobalStyle";
 export const AboutContainer = styled.div`
   display: flex;
   padding: 0 0.5rem;
+  transform: translateY(20%);
 
   @media screen and (max-width: ${lgScreen}) {
     flex-direction: column-reverse;
+    transform: translateY(0);
   }
 `;
 

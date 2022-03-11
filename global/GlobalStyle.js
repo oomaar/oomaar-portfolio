@@ -48,12 +48,16 @@ export const theme = {
 
 // Reusable Classes
 export const Section = styled.section`
-  padding: 2rem 0 4rem;
+  padding: 6rem 0 2rem;
   height: 100vh;
   margin: 4.5rem 0;
+  background: ${({ image, url }) =>
+    image && `url(${url}) center center / cover no-repeat`};
 
-  @media screen and (min-width: ${lgScreen}) {
-    padding: 6rem 0 2rem;
+  @media screen and (max-width: ${lgScreen}) {
+    padding: 2rem 0 4rem;
+    overflow: hidden;
+    height: 120vh;
   }
 `;
 
