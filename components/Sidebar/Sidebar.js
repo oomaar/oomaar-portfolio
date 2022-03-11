@@ -11,7 +11,7 @@ import {
 export const Sidebar = ({ showMenu, setShowMenu, data }) => {
   const sidebarLinks = data.links.map((link) => (
     <SidebarListItem className="list-item" key={link.id}>
-      <a href={link.href}>
+      <a href={link.href} onClick={() => setShowMenu(false)}>
         <span className="split-text" data-text={link.title}>
           {link.title}
         </span>
