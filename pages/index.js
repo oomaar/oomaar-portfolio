@@ -32,7 +32,7 @@ export default function Home() {
       />
       <Hero data={portfolioData.hero} />
       <SocialMedia data={portfolioData.socialMedia} />
-      <About />
+      <About data={portfolioData.about} />
       <Qualification />
       <Skills />
       <Projects />
