@@ -52,7 +52,9 @@ export const Section = styled.section`
   height: 100vh;
   margin: 4.5rem 0;
   background: ${({ image, url }) =>
-    image && `url(${url}) center center / cover no-repeat`};
+    image &&
+    `linear-gradient(to bottom, rgba(0, 255, 0, 0.05), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 255, 0, 0.05)),
+    url(${url}) center center / cover no-repeat`};
 
   @media screen and (max-width: ${lgScreen}) {
     padding: 2rem 0 4rem;
