@@ -10,7 +10,7 @@ export const OverLay = styled.div`
   z-index: ${({ theme }) => theme.zIndex.zMenu};
   width: 100%;
   transform: ${({ showMenu }) =>
-    showMenu ? "translateX(0)" : "translateX(-2000px)"};
+    showMenu ? "translateX(0)" : "translateX(-3000px)"};
   transition: all 0.5s ease-in;
 `;
 
