@@ -3,7 +3,7 @@ import { HeroContainer, HeroFeature } from "./styledHero";
 
 export const Hero = ({ data }) => {
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <Container>
         <HeroFeature>
           <p>I'm a {data.profession}</p>
