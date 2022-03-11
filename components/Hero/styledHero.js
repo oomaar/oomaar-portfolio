@@ -13,6 +13,7 @@ export const HeroFeature = styled.div`
   transform: translateY(20%);
   position: relative;
   padding: 1rem;
+  transform: translateX(50%);
 
   h1 {
     font-size: ${({ theme }) => theme.typo.headingFont};
@@ -30,11 +31,12 @@ export const HeroFeature = styled.div`
   div {
     background-color: ${({ theme }) => theme.lightColors.primaryColor};
     height: 5px;
-    width: 240px;
+    width: 150px;
     margin-top: 4rem;
   }
 
   @media screen and (max-width: ${lgScreen}) {
     width: 100%;
+    transform: translateX(0);
   }
 `;
