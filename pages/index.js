@@ -32,14 +32,14 @@ export default function Home() {
         setShowMenu={setShowMenu}
       />
       <SocialMedia data={portfolioData.socialMedia} />
-      <ReactPageScroller animationTimer={800}>
-        <Hero data={portfolioData.hero} />
-        <About data={portfolioData.about} />
-        <Qualification data={portfolioData.qualification} />
-        <Skills />
-        <Projects />
-        <Contact />
-      </ReactPageScroller>
+      {/* <ReactPageScroller animationTimer={800}> */}
+      <Hero data={portfolioData.hero} />
+      <About data={portfolioData.about} />
+      <Qualification data={portfolioData.qualification} />
+      <Skills />
+      <Projects />
+      <Contact />
+      {/* </ReactPageScroller> */}
     </div>
   );
 }
