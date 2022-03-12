@@ -59,7 +59,7 @@ export const Section = styled.section`
   @media screen and (max-width: ${lgScreen}) {
     padding: 2rem 0 4rem;
     overflow: hidden;
-    height: 120vh;
+    height: ${({ skills }) => (skills ? "150vh" : "120vh")};
   }
 `;
 
