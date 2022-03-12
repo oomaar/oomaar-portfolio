@@ -73,7 +73,7 @@ export const SectionTitle = styled.h1`
 `;
 
 export const Container = styled.div`
-  max-width: 768px;
+  max-width: 1024px;
   margin: 0 1.5rem 0 1.5rem;
 
   @media screen and (max-width: ${xsScreen}) {
