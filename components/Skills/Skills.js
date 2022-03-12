@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Section } from "../../global/GlobalStyle";
 import { SkillsContainer } from "./styledSkills";
 
-export const Skills = () => {
+export const Skills = ({ data }) => {
   return (
     <Section id="skills">
       <Container>

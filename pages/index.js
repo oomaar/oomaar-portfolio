@@ -36,7 +36,7 @@ export default function Home() {
       <Hero data={portfolioData.hero} />
       <About data={portfolioData.about} />
       <Qualification data={portfolioData.qualification} />
-      <Skills />
+      <Skills data={portfolioData.skills} />
       <Projects />
       <Contact />
       {/* </ReactPageScroller> */}
