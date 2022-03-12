@@ -203,6 +203,10 @@
       },
       {
         "id": 7,
+        "skill": "Sass"
+      },
+      {
+        "id": 8,
         "skill": "Styled-Components"
       }
     ],
