@@ -6,14 +6,11 @@ import {
   CarouselSlide,
   Arrows,
   Arrow,
+  Dots,
 } from "./styledProjects";
 
 export const Projects = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log(
-    "🚀 ~ file: Projects.js ~ line 13 ~ Projects ~ activeIndex",
-    activeIndex
-  );
   const testData = data.map((test) => (
     <CarouselSlide
       key={test.id}
@@ -21,6 +18,16 @@ export const Projects = ({ data }) => {
     >
       <img src={test.img} alt="" />
     </CarouselSlide>
+  ));
+
+  const onclick = (active) => setActiveIndex(active);
+
+  const testDots = data.map((dot) => (
+    <span
+      key={dot.id}
+      className={`${activeIndex === dot.id ? "active-dot" : ""}`}
+      onClick={(event) => onclick((event.target.value = dot.id))}
+    ></span>
   ));
 
   const len = data.length - 1;
@@ -38,6 +45,7 @@ export const Projects = ({ data }) => {
             <Arrow onClick={prevSlide}>&#10094;</Arrow>
             <Arrow onClick={nextSlide}>&#10095;</Arrow>
           </Arrows>
+          <Dots>{testDots}</Dots>
           <CarouselContainer>{testData}</CarouselContainer>
         </ProjectsContainer>
       </Container>

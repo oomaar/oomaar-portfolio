@@ -63,3 +63,36 @@ export const Arrow = styled.button`
     background-color: rgba(0, 0, 0, 0.2);
   }
 `;
+
+export const Dots = styled.div`
+  position: absolute;
+  bottom: -10%;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+
+  span {
+    display: inline-block;
+    cursor: pointer;
+    height: 0.8rem;
+    width: 0.8rem;
+    margin: 0 5px;
+    background-color: #808080;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+
+    &.active-dot {
+      background-color: ${({ theme }) => theme.lightColors.primaryColor};
+      &:hover {
+        background-color: #f00;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+`;
