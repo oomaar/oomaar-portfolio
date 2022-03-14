@@ -47,6 +47,9 @@ export const Projects = ({ data }) => {
           </Arrows>
           <Dots>{testDots}</Dots>
           <CarouselContainer>{testData}</CarouselContainer>
+          <h1 style={{ fontSize: "20rem" }}>
+            TODO: Style and Organize Carousel
+          </h1>
         </ProjectsContainer>
       </Container>
     </Section>
