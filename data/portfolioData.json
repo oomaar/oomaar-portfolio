@@ -250,5 +250,23 @@
         "skill": "Photoshop"
       }
     ]
-  }
+  },
+  "projects": [
+    {
+      "id": 0,
+      "img": "/portfolio/geforce.jpg"
+    },
+    {
+      "id": 1,
+      "img": "/portfolio/google.jpg"
+    },
+    {
+      "id": 2,
+      "img": "/portfolio/netflix.jpg"
+    },
+    {
+      "id": 3,
+      "img": "/portfolio/hulu.png"
+    }
+  ]
 }

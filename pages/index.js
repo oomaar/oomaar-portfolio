@@ -37,7 +37,7 @@ export default function Home() {
       <About data={portfolioData.about} />
       <Qualification data={portfolioData.qualification} />
       <Skills data={portfolioData.skills} />
-      <Projects />
+      <Projects data={portfolioData.projects} />
       <Contact />
       {/* </ReactPageScroller> */}
     </div>
