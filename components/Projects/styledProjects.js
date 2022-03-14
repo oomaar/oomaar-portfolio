@@ -16,9 +16,13 @@ export const CarouselSlide = styled.li`
   position: absolute;
   inset: 0;
   opacity: 0;
+  transition: opacity 200ms ease-in;
+  transition-delay: 200ms;
 
   &.active {
     opacity: 1;
+    z-index: 50;
+    transition-delay: 0ms;
   }
 
   img {
