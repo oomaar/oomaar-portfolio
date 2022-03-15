@@ -1,28 +1,51 @@
 import { useState } from "react";
-import { Container, Section } from "../../global/GlobalStyle";
+import { Container, Section, SectionTitle } from "../../global/GlobalStyle";
 import {
   ProjectsContainer,
   CarouselContainer,
   CarouselSlide,
+  SlideImage,
+  SlideTitle,
+  SlideText,
+  SlideLink,
+  SlideIcon,
   Arrows,
   Arrow,
   Dots,
+  SlideTextContainer,
+  SlideLinksContainer,
 } from "./styledProjects";
 
 export const Projects = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const testData = data.map((test) => (
+  console.log(
+    "🚀 ~ file: Projects.js ~ line 21 ~ Projects ~ activeIndex",
+    activeIndex
+  );
+  const slidesData = data.projectsData.map((slide) => (
     <CarouselSlide
-      key={test.id}
-      className={`${test.id === activeIndex ? "active" : ""}`}
+      key={slide.id}
+      className={`${slide.id === activeIndex ? "active" : ""}`}
     >
-      <img src={test.img} alt="" />
+      <SlideImage>
+        <img src={slide.src} alt={slide.alt} />
+      </SlideImage>
+      <SlideTextContainer>
+        <SlideTitle>{slide.title}</SlideTitle>
+        <SlideText>{slide.description}</SlideText>
+        <SlideLinksContainer>
+          <SlideLink href={slide.url}>Demo</SlideLink>
+          <SlideIcon>
+            <img src="/social/github-sign.png" alt="" />
+          </SlideIcon>
+        </SlideLinksContainer>
+      </SlideTextContainer>
     </CarouselSlide>
   ));
 
   const onclick = (active) => setActiveIndex(active);
 
-  const testDots = data.map((dot) => (
+  const slideDots = data.projectsData.map((dot) => (
     <span
       key={dot.id}
       className={`${activeIndex === dot.id ? "active-dot" : ""}`}
@@ -30,7 +53,8 @@ export const Projects = ({ data }) => {
     ></span>
   ));
 
-  const len = data.length - 1;
+  const len = data.projectsData.length - 1;
+  console.log("🚀 ~ file: Projects.js ~ line 57 ~ Projects ~ len", len);
 
   const prevSlide = () =>
     setActiveIndex(activeIndex < 1 ? len : activeIndex - 1);
@@ -38,18 +62,16 @@ export const Projects = ({ data }) => {
     setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
 
   return (
-    <Section id="projects">
+    <Section id="projects" image={true} url={data.sectionBg}>
+      <SectionTitle style={{ color: "#fff" }}>My Projects</SectionTitle>
       <Container>
         <ProjectsContainer>
           <Arrows>
             <Arrow onClick={prevSlide}>&#10094;</Arrow>
             <Arrow onClick={nextSlide}>&#10095;</Arrow>
           </Arrows>
-          <Dots>{testDots}</Dots>
-          <CarouselContainer>{testData}</CarouselContainer>
-          <h1 style={{ fontSize: "20rem" }}>
-            TODO: Style and Organize Carousel
-          </h1>
+          <Dots>{slideDots}</Dots>
+          <CarouselContainer>{slidesData}</CarouselContainer>
         </ProjectsContainer>
       </Container>
     </Section>
