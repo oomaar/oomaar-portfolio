@@ -251,22 +251,57 @@
       }
     ]
   },
-  "projects": [
-    {
-      "id": 0,
-      "img": "/portfolio/geforce.jpg"
-    },
-    {
-      "id": 1,
-      "img": "/portfolio/google.jpg"
-    },
-    {
-      "id": 2,
-      "img": "/portfolio/netflix.jpg"
-    },
-    {
-      "id": 3,
-      "img": "/portfolio/hulu.png"
-    }
-  ]
+  "projects": {
+    "sectionBg": "/projects.jpg",
+    "projectsData": [
+      {
+        "id": 0,
+        "src": "/portfolio/beats-circle.jpg",
+        "alt": "Beats shop",
+        "title": "Beats Shop",
+        "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components.",
+        "url": "https://beats-shop.vercel.app/"
+      },
+      {
+        "id": 1,
+        "src": "/portfolio/covid-tracker.jpg",
+        "alt": "Covid-19 Tracker",
+        "title": "Covid-19 Tracker (ReactJS)",
+        "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components.",
+        "url": "https://covid-19-tracker-16970.web.app/"
+      },
+      {
+        "id": 2,
+        "src": "/portfolio/makeup.jpg",
+        "alt": "Makeup Store Demo",
+        "title": "Makeup Store Demo (ReactJS)",
+        "description": "Developed Fully Responsive with ReactJS and Styled-components.",
+        "url": "https://serene-spence-a7962f.netlify.app/"
+      },
+      {
+        "id": 3,
+        "src": "/portfolio/netflix.jpg",
+        "alt": "Netflix Clone",
+        "title": "Netflix Clone (ReactJS)",
+        "description": "Developed using ReactJS, Styled-components, Compound Components and Firebase.",
+        "url": "https://dreamy-meninsky-4d3cd3.netlify.app/"
+      },
+      {
+        "id": 4,
+        "src": "/portfolio/geforce.jpg",
+        "alt": "Geforce Clone",
+        "title": "Geforce Clone (NextJS)",
+        "description": "Fully Responsive using NextJS and Styled Components.",
+        "url": "https://geforce-clone-oomaar.vercel.app/"
+      },
+      {
+        "id": 5,
+        "src": "/portfolio/twitter.jpg",
+        "alt": "Twitter Clone",
+        "title": "Twitter Clone (ReactJS)",
+        "description": "Fully Responsive Twitter Clone developed with ReactJS, Styled-components and Firebase.",
+        "url": "https://twitter-4e819.web.app/"
+      }
+    ]
+  }
 }
