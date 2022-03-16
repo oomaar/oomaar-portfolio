@@ -6,6 +6,7 @@ import {
   ContactForm,
   FormHeader,
   InfoContainer,
+  InputsContainer,
 } from "./styledContact";
 
 export const Contact = ({ data }) => {
@@ -25,6 +26,17 @@ export const Contact = ({ data }) => {
             <FormHeader>
               {data.text} <span>{data.textSpan}</span>
             </FormHeader>
+            <InputsContainer>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+            </InputsContainer>
           </ContactForm>
         </ContactContainer>
       </Container>

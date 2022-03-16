@@ -25,3 +25,37 @@ export const FormHeader = styled.div`
     color: ${({ theme }) => theme.lightColors.primaryColor};
   }
 `;
+
+export const InputsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  margin: 2rem 0 0;
+
+  input,
+  textarea {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid ${({ theme }) => theme.lightColors.borderWhite};
+    padding: 1rem;
+    font-size: 1rem;
+    background: transparent;
+    transition: all 0.5s ease-in;
+
+    :focus {
+      border: 1px solid ${({ theme }) => theme.lightColors.borderWhite};
+    }
+
+    ::placeholder {
+      color: #000;
+    }
+  }
+
+  /* textarea {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid ${({ theme }) => theme.lightColors.borderWhite};
+    padding: 1rem;
+    font-size: 1rem;
+  } */
+`;
