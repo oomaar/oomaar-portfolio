@@ -1,13 +1,31 @@
 import React from "react";
-import { Container, Section } from "../../global/GlobalStyle";
-import { ContactContainer } from "./styledContact";
+import { Container, Section, SectionTitle } from "../../global/GlobalStyle";
+import {
+  ContactContainer,
+  ContactInfo,
+  ContactForm,
+  FormHeader,
+  InfoContainer,
+} from "./styledContact";
 
-export const Contact = () => {
+export const Contact = ({ data }) => {
   return (
     <Section id="contact">
       <Container>
+        <SectionTitle>Contact Me</SectionTitle>
         <ContactContainer>
-          <h1>TODO: Contact</h1>
+          <ContactInfo>
+            <InfoContainer>
+              <p>{data.address}</p>
+              <p>{data.phone}</p>
+              <p>{data.email}</p>
+            </InfoContainer>
+          </ContactInfo>
+          <ContactForm>
+            <FormHeader>
+              {data.text} <span>{data.textSpan}</span>
+            </FormHeader>
+          </ContactForm>
         </ContactContainer>
       </Container>
     </Section>
