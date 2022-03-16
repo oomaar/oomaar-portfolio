@@ -1,14 +1,19 @@
 import styled from "styled-components";
+import { mdScreen, xlScreen } from "../../global/GlobalStyle";
 
 export const ProjectsContainer = styled.div`
   position: relative;
-  height: 60vh;
+  height: 75vh;
   width: 1024px;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.5);
   padding: 1rem;
   border-radius: 1rem;
   color: #fff;
+
+  @media screen and (max-width: ${xlScreen}) {
+    width: 100%;
+  }
 `;
 
 export const CarouselContainer = styled.ul`
@@ -46,6 +51,7 @@ export const SlideTextContainer = styled.div`
 
 export const SlideLinksContainer = styled.div`
   display: flex;
+  align-items: center;
   gap: 0 1rem;
 `;
 
@@ -60,11 +66,34 @@ export const SlideImage = styled.div`
     object-fit: cover;
     object-position: center;
   }
+
+  @media screen and (max-width: ${xlScreen}) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: ${mdScreen}) {
+    width: 100%;
+  }
 `;
 
-export const SlideTitle = styled.h3``;
+export const SlideTitle = styled.h3`
+  height: 45px;
+  font-size: ${({ theme }) => theme.typo.smallTitleFont};
 
-export const SlideText = styled.p``;
+  @media screen and (max-width: ${mdScreen}) {
+    font-size: 1.2rem;
+  }
+`;
+
+export const SlideText = styled.p`
+  height: 60px;
+
+  font-size: ${({ theme }) => theme.typo.iconSmallFont};
+
+  @media screen and (max-width: ${mdScreen}) {
+    font-size: ${({ theme }) => theme.typo.textFont};
+  }
+`;
 
 export const SlideLink = styled.a`
   font-size: ${({ theme }) => theme.typo.menuLinkFont};
@@ -98,6 +127,10 @@ export const Arrows = styled.div`
   right: 0;
   transform: translateY(-50%);
   z-index: 100;
+
+  @media screen and (max-width: ${mdScreen}) {
+    top: 60%;
+  }
 `;
 
 export const Arrow = styled.button`
@@ -116,6 +149,10 @@ export const Arrow = styled.button`
     outline: 1px solid #000;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (max-width: ${mdScreen}) {
+    font-size: 2rem;
   }
 `;
 
