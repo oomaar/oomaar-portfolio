@@ -19,6 +19,7 @@ export const About = ({ data }) => {
   return (
     <Section id="about">
       <Container>
+        <SectionTitle>About Me</SectionTitle>
         <AboutContainer>
           <AboutLeftContainer>
             <AboutImage>
@@ -34,7 +35,6 @@ export const About = ({ data }) => {
             </AboutImage>
           </AboutLeftContainer>
           <AboutRightContainer>
-            <SectionTitle>About Me</SectionTitle>
             <AboutText>
               {data.experiencePartA} <span>{data.experiencePartB}</span>{" "}
               {data.experiencePartC}
