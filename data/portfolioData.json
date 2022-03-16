@@ -305,10 +305,10 @@
     ]
   },
   "contact": {
-    "address": "Egypt - Cariro - Heliopolis",
+    "address": "Egypt - Cairo - Heliopolis",
     "phone": "(002) 01140125555",
     "email": "omaar_5@hotmail.com",
     "text": "Let's grab a coffee and jump on conversation",
-    "testSpan": "chat with me."
+    "textSpan": "chat with me."
   }
 }
