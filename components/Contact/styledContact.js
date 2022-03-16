@@ -50,12 +50,4 @@ export const InputsContainer = styled.div`
       color: #000;
     }
   }
-
-  /* textarea {
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid ${({ theme }) => theme.lightColors.borderWhite};
-    padding: 1rem;
-    font-size: 1rem;
-  } */
 `;
