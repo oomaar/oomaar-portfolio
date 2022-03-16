@@ -12,7 +12,6 @@ import {
 } from "../components";
 import { NextHead } from "../global/NextHead";
 import portfolioData from "../data/portfolioData.json";
-import ReactPageScroller from "react-page-scroller";
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -38,7 +37,7 @@ export default function Home() {
       <Qualification data={portfolioData.qualification} />
       <Skills data={portfolioData.skills} />
       <Projects data={portfolioData.projects} />
-      <Contact />
+      <Contact data={portfolioData.contact} />
       {/* </ReactPageScroller> */}
     </div>
   );

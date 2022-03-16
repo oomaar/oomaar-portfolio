@@ -303,5 +303,12 @@
         "url": "https://twitter-4e819.web.app/"
       }
     ]
+  },
+  "contact": {
+    "address": "Egypt - Cariro - Heliopolis",
+    "phone": "(002) 01140125555",
+    "email": "omaar_5@hotmail.com",
+    "text": "Let's grab a coffee and jump on conversation",
+    "testSpan": "chat with me."
   }
 }
