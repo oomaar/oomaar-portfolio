@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   About,
   Contact,
+  Footer,
   Hero,
   Navbar,
   Projects,
@@ -37,6 +38,7 @@ export default function Home() {
       <Skills data={portfolioData.skills} />
       <Projects data={portfolioData.projects} />
       <Contact data={portfolioData.contact} />
+      <Footer />
     </div>
   );
 }
