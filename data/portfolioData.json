@@ -310,5 +310,40 @@
     "email": "omaar_5@hotmail.com",
     "text": "Let's grab a coffee and jump on conversation",
     "textSpan": "chat with me."
+  },
+  "footer": {
+    "info": {
+      "address": "Egypt - Cairo - Heliopolis",
+      "phone": "(002) 01140125555",
+      "email": "omaar_5@hotmail.com",
+      "text": "Let's grab a coffee and jump on conversation",
+      "textSpan": "chat with me."
+    },
+    "socialMedia": [
+      {
+        "id": 1,
+        "title": "github",
+        "icon": "/social/github-sign.png",
+        "link": "https://github.com/oomaar"
+      },
+      {
+        "id": 2,
+        "title": "linkedin",
+        "icon": "/social/in.png",
+        "link": "https://www.linkedin.com/in/omar-hassan-8b1869137/"
+      },
+      {
+        "id": 3,
+        "title": "facebook",
+        "icon": "/social/facebook-app-logo.png",
+        "link": "https://www.facebook.com/omarhassan16694"
+      },
+      {
+        "id": 4,
+        "title": "instagram",
+        "icon": "/social/instagram-symbol.png",
+        "link": "https://www.instagram.com/omaar_sk/"
+      }
+    ]
   }
 }
