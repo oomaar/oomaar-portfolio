@@ -34,20 +34,25 @@ export const InputsContainer = styled.div`
 
   input,
   textarea {
-    border: 0;
     outline: 0;
-    border-bottom: 1px solid ${({ theme }) => theme.lightColors.borderWhite};
+    /* border: 1px solid ${({ theme }) => theme.lightColors.borderWhite}; */
+    border: 0;
+    border-radius: 1rem;
     padding: 1rem;
     font-size: 1rem;
     background: transparent;
-    transition: all 0.5s ease-in;
+    background-color: #000;
+    transition: all 0.1s ease-in;
+    color: #fff;
 
     :focus {
-      border: 1px solid ${({ theme }) => theme.lightColors.borderWhite};
+      /* border: 1px solid ${({ theme }) => theme.lightColors.primaryColor}; */
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
     }
 
     ::placeholder {
-      color: #000;
+      color: #fff;
     }
   }
 `;
