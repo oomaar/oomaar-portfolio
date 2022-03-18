@@ -18,10 +18,7 @@ import {
 
 export const Projects = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log(
-    "🚀 ~ file: Projects.js ~ line 21 ~ Projects ~ activeIndex",
-    activeIndex
-  );
+
   const slidesData = data.projectsData.map((slide) => (
     <CarouselSlide
       key={slide.id}
@@ -54,7 +51,6 @@ export const Projects = ({ data }) => {
   ));
 
   const len = data.projectsData.length - 1;
-  console.log("🚀 ~ file: Projects.js ~ line 57 ~ Projects ~ len", len);
 
   const prevSlide = () =>
     setActiveIndex(activeIndex < 1 ? len : activeIndex - 1);
