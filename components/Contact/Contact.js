@@ -57,6 +57,10 @@ export const Contact = ({ data }) => {
                     value: true,
                     message: "Please enter your email",
                   },
+                  pattern: {
+                    value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]+$/i,
+                    message: "This need to be a valid email address",
+                  },
                 })}
                 name="email"
               />
