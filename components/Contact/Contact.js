@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import axios from "axios";
 import { Container, Section, SectionTitle } from "../../global/GlobalStyle";
 import {
   ContactContainer,
@@ -17,8 +18,29 @@ export const Contact = ({ data }) => {
     reset,
     formState: { errors },
   } = useForm();
-  const onSubmitForm = (values) =>
-    console.log("🚀 ~ file: Contact.js ~ line 15 ~ Contact ~ values", values);
+  const onSubmitForm = async (values) => {
+    let config = {
+      metho: "post",
+      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: values,
+    };
+
+    try {
+      const response = await axios(config);
+      console.log(
+        "🚀 ~ file: Contact.js ~ line 32 ~ onSubmitForm ~ response",
+        response
+      );
+    } catch (error) {
+      console.log(
+        "🚀 ~ file: Contact.js ~ line 38 ~ onSubmitForm ~ error",
+        error
+      );
+    }
+  };
 
   return (
     <Section id="contact">
