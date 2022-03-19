@@ -21,23 +21,24 @@ export default function Home() {
     <div>
       <NextHead title="Omar's Resume" />
 
-      <Navbar
+      <h1>TODO: Re-Design the portfolio</h1>
+      {/* <Navbar
         data={portfolioData.navbar}
         showMenu={showMenu}
         setShowMenu={setShowMenu}
-      />
-      <Sidebar
+      /> */}
+      {/* <Sidebar
         data={portfolioData.sidebar}
         showMenu={showMenu}
         setShowMenu={setShowMenu}
-      />
-      <SocialMedia data={portfolioData.socialMedia} />
-      <Hero data={portfolioData.hero} />
-      <About data={portfolioData.about} />
-      <Qualification data={portfolioData.qualification} />
-      <Skills data={portfolioData.skills} />
-      <Projects data={portfolioData.projects} />
-      <Contact data={portfolioData.contact} />
+      /> */}
+      {/* <SocialMedia data={portfolioData.socialMedia} /> */}
+      {/* <Hero data={portfolioData.hero} /> */}
+      {/* <About data={portfolioData.about} /> */}
+      {/* <Qualification data={portfolioData.qualification} /> */}
+      {/* <Skills data={portfolioData.skills} /> */}
+      {/* <Projects data={portfolioData.projects} /> */}
+      {/* <Contact data={portfolioData.contact} /> */}
       {/* <Footer data={portfolioData.footer} /> */}
     </div>
   );
