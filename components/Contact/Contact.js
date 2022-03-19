@@ -30,10 +30,9 @@ export const Contact = ({ data }) => {
 
     try {
       const response = await axios(config);
-      console.log(
-        "🚀 ~ file: Contact.js ~ line 32 ~ onSubmitForm ~ response",
-        response
-      );
+      if (response.status === 200) {
+        console.log("success");
+      }
     } catch (error) {
       console.log(
         "🚀 ~ file: Contact.js ~ line 38 ~ onSubmitForm ~ error",
