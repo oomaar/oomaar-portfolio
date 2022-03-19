@@ -25,13 +25,9 @@ export default async (req, res) => {
     });
 
     console.log("Message Sent", emailPost.messageId);
-    console.log("first", emailPost);
   } catch (error) {
     console.log("🚀 ~ file: contact.js ~ line 27 ~ error", error);
   }
 
   res.status(200).json(req.body);
-
-  console.log("🚀 ~ file: contact.js ~ line 35 ~ req.body", req.body);
-  // console.log("🚀 ~ file: contact.js ~ line 36 ~ req", req);
 };

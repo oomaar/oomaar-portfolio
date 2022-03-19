@@ -17,13 +17,8 @@ export const Contact = ({ data }) => {
     setError,
     reset,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      name: "test",
-      email: "test@test.com",
-      message: "testssss",
-    },
-  });
+  } = useForm();
+
   const onSubmitForm = async (values) => {
     let config = {
       method: "post",
@@ -46,6 +41,18 @@ export const Contact = ({ data }) => {
       );
     }
   };
+
+  // try {
+  //   const response = await axios(config);
+  //   console.log(response);
+  //   if (response.status == 200) {
+  //     reset();
+  //     toast(
+  //       'success',
+  //       'Thank you for contacting us, we will be in touch soon.'
+  //     );
+  //   }
+  // } catch (err) {}
 
   return (
     <Section id="contact">
