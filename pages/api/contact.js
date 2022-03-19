@@ -33,4 +33,5 @@ export default async (req, res) => {
   res.status(200).json(req.body);
 
   console.log("🚀 ~ file: contact.js ~ line 35 ~ req.body", req.body);
+  // console.log("🚀 ~ file: contact.js ~ line 36 ~ req", req);
 };

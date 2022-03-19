@@ -17,10 +17,16 @@ export const Contact = ({ data }) => {
     setError,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      name: "test",
+      email: "test@test.com",
+      message: "testssss",
+    },
+  });
   const onSubmitForm = async (values) => {
     let config = {
-      metho: "post",
+      method: "post",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
       headers: {
         "Content-Type": "application/json",
@@ -61,6 +67,7 @@ export const Contact = ({ data }) => {
               <input
                 type="text"
                 placeholder="Name"
+                ref={register}
                 {...register("name", {
                   required: {
                     value: true,
