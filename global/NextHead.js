@@ -16,9 +16,6 @@ export const NextHead = ({ title }) => {
         href="https://fonts.gstatic.com"
         crossOrigin="true"
       />
-
-      {/* Links: Style-Sheets */}
-      <script src="./links.js" type="text/javascript" defer></script>
     </Head>
   );
 };
