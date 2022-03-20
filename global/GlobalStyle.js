@@ -1,14 +1,14 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 // Navbar Height
-
+export const navbarHeight = `3.5rem`;
 // View Ports
 
 // Colors Constants
-const primaryHue = 250;
-const saturation = `66%`;
-const light = `75%`;
-const secondaryHue = 219;
+export const primaryHue = 250;
+export const saturation = `66%`;
+export const light = `75%`;
+export const secondaryHue = 219;
 
 // Theme
 export const lightTheme = {
