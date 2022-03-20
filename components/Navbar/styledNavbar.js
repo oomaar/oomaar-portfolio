@@ -4,10 +4,10 @@ export const Nav = styled.nav``;
 
 export const Logo = styled.h1``;
 
-export const NavButton = styled.div``;
+export const NavbarList = styled.ul``;
 
-export const NavButtonLine1 = styled.div``;
+export const NavbarItem = styled.li``;
 
-export const NavButtonLine2 = styled.div``;
+export const NavbarLink = styled.a``;
 
-export const NavButtonLine3 = styled.div``;
+export const NavThemeButton = styled.div``;

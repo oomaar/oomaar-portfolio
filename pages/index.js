@@ -21,8 +21,6 @@ export default function Home() {
     <div>
       <NextHead title="Omar's Resume" />
 
-      <h1>TODO: Re-Design the portfolio</h1>
-      <i className="bx bx-user"></i>
       <Navbar
         data={portfolioData.navbar}
         showMenu={showMenu}

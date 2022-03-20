@@ -1,22 +1,29 @@
-import { useEffect, useState } from "react";
 import {
   Nav,
   Logo,
-  NavButton,
-  NavButtonLine1,
-  NavButtonLine2,
-  NavButtonLine3,
+  NavThemeButton,
+  NavbarList,
+  NavbarItem,
+  NavbarLink,
 } from "./styledNavbar";
 
-export const Navbar = ({ showMenu, setShowMenu, data }) => {
+export const Navbar = ({ data }) => {
+  const navbarLinks = data.links.map((link) => (
+    <NavbarItem key={link.id}>
+      <NavbarLink href={link.href}>
+        <i className={link.icon}></i>
+      </NavbarLink>
+    </NavbarItem>
+  ));
+
   return (
     <Nav>
       <Logo>{data.name}</Logo>
-      <NavButton onClick={() => setShowMenu(true)}>
-        <NavButtonLine1 showMenu={showMenu}></NavButtonLine1>
-        <NavButtonLine2 showMenu={showMenu}></NavButtonLine2>
-        <NavButtonLine3 showMenu={showMenu}></NavButtonLine3>
-      </NavButton>
+      <NavbarList>{navbarLinks}</NavbarList>
+      <NavThemeButton>
+        <i className="bx bx-moon"></i>
+        {/* <i className="bx bx-sun"></i> */}
+      </NavThemeButton>
     </Nav>
   );
 };
