@@ -48,6 +48,32 @@ export const theme = {
 };
 
 // Reusable Classes
+export const Container = styled.div`
+  max-width: 968px;
+  margin: 0 1rem;
+`;
+
+export const Main = styled.main`
+  overflow: hidden;
+`;
+
+export const Section = styled.section`
+  padding: 4.5rem 0 1rem;
+`;
+
+export const SectionTitle = styled.h2`
+  text-align: center;
+  font-size: ${({ theme }) => theme.font.h2Font};
+  margin-bottom: 2rem;
+  color: ${({ theme }) => theme.colors.firstColor};
+`;
+
+export const SectionSubTitle = styled.p`
+  text-align: center;
+  display: block;
+  font-size: ${({ theme }) => theme.font.smallerFont};
+  color: ${({ theme }) => theme.colors.textColorLight};
+`;
 
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
