@@ -16,9 +16,9 @@ export const Navbar = ({ data }) => {
         href={link.href}
         className={link.id === "nav-link-1" && "active"}
       >
-        {/* <NavbarLink href={link.href} className="active"> */}
         <i className={link.icon}></i>
       </NavbarLink>
+      {/* <p>{link.title}</p> */}
     </NavbarItem>
   ));
 

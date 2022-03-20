@@ -36,6 +36,9 @@ export const Logo = styled.h1`
 export const NavMenu = styled.div`
   position: fixed;
   bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   background-color: hsla(${secondaryHue}, 32%, 16%, 0.8);
   width: 90%;
   border-radius: 4rem;
@@ -47,6 +50,7 @@ export const NavbarList = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 `;
 
 export const NavbarItem = styled.li``;
