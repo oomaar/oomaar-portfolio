@@ -23,11 +23,11 @@ export default function Home() {
 
       <h1>TODO: Re-Design the portfolio</h1>
       <i className="bx bx-user"></i>
-      {/* <Navbar
+      <Navbar
         data={portfolioData.navbar}
         showMenu={showMenu}
         setShowMenu={setShowMenu}
-      /> */}
+      />
       {/* <Sidebar
         data={portfolioData.sidebar}
         showMenu={showMenu}
