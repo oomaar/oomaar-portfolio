@@ -1,6 +1,38 @@
 {
   "navbar": {
-    "name": "Omar H."
+    "name": "Omar",
+    "links": [
+      {
+        "id": "nav-link-1",
+        "title": "Home",
+        "href": "#home",
+        "icon": "bx bx-home-alt"
+      },
+      {
+        "id": "nav-link-2",
+        "title": "About",
+        "href": "#about",
+        "icon": "bx bx-user"
+      },
+      {
+        "id": "nav-link-3",
+        "title": "Qualification",
+        "href": "#qualification",
+        "icon": "bx bx-briefcase-alt-2"
+      },
+      {
+        "id": "nav-link-4",
+        "title": "Skills",
+        "href": "#skills",
+        "icon": "bx bx-book"
+      },
+      {
+        "id": "nav-link-5",
+        "title": "Contact",
+        "href": "#contact",
+        "icon": "bx bx-message-square-detail"
+      }
+    ]
   },
   "sidebar": {
     "links": [
