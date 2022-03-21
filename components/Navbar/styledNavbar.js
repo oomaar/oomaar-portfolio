@@ -43,9 +43,9 @@ export const NavMenu = styled.div`
   right: 0;
   margin: 0 auto;
   background-color: hsla(${secondaryHue}, 32%, 16%, 0.8);
-  width: 90%;
+  width: 80%;
   border-radius: 4rem;
-  padding: 1rem 2.25rem;
+  padding: 0.5rem 1.25rem;
   backdrop-filter: blur(10px);
 `;
 
