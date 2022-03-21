@@ -14,6 +14,8 @@ export const Header = styled.header`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.bodyColor};
   z-index: ${({ theme }) => theme.zIndex.zFixed};
+  box-shadow: ${({ navShadow }) =>
+    navShadow && "0 4px 4px hsla(0, 0%, 4%, 0.3)"};
 `;
 
 export const Nav = styled.nav`

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Header,
   Nav,
@@ -10,6 +11,15 @@ import {
 } from "./styledNavbar";
 
 export const Navbar = ({ data }) => {
+  const [navShadow, setNavShadow] = useState(false);
+
+  const handleNavShadow = () =>
+    window.scrollY > 10 ? setNavShadow(true) : setNavShadow(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleNavShadow);
+  }, []);
+
   const navbarLinks = data.links.map((link) => (
     <NavbarItem key={link.id}>
       <NavbarLink
@@ -23,7 +33,7 @@ export const Navbar = ({ data }) => {
   ));
 
   return (
-    <Header>
+    <Header navShadow={navShadow}>
       <Nav>
         <Logo>{data.name}</Logo>
         <NavMenu>
