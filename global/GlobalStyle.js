@@ -55,6 +55,7 @@ export const Container = styled.div`
 
 export const Main = styled.main`
   overflow: hidden;
+  padding-bottom: calc(${navbarHeight} + 4rem);
 `;
 
 export const Section = styled.section`
