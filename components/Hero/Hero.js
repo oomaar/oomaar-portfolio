@@ -1,5 +1,5 @@
 import { HeroAnimation } from "..";
-import { Container, Section } from "../../global/GlobalStyle";
+import { Button, Container, Section } from "../../global/GlobalStyle";
 import {
   HeroContainer,
   HeroName,
@@ -32,10 +32,10 @@ export const Hero = ({ data }) => {
             <HeroTitle>{data.profession}</HeroTitle>
           </HeroData>
           <HeroButtons>
-            <HeroButton download="" href="/pdf/Omar-Hassan-CV-2022.pdf">
+            <Button ghost download="" href="/pdf/Omar-Hassan-CV-2022.pdf">
               Download CV
-            </HeroButton>
-            <HeroButton href="#about">About Me</HeroButton>
+            </Button>
+            <Button href="#about">About Me</Button>
           </HeroButtons>
           <HeroImage>
             <HeroAnimation />

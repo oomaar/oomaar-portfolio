@@ -75,6 +75,26 @@ export const SectionSubTitle = styled.p`
   color: ${({ theme }) => theme.colors.textColorLight};
 `;
 
+// Buttons
+export const Button = styled.a`
+  display: inline-block;
+  background-color: ${({ theme, ghost }) =>
+    ghost ? "transparent" : theme.colors.firstColor};
+  border: ${({ theme, ghost }) =>
+    ghost ? `2px solid ${theme.colors.firstColor}` : `2px solid transparent`};
+  color: ${({ theme, ghost }) =>
+    ghost ? theme.colors.firstColor : theme.colors.bodyColor};
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: ${({ theme }) => theme.weight.medium};
+  transition: all 0.4s ease-in;
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.firstColorAlt};
+    color: ${({ theme }) => theme.colors.bodyColor};
+  }
+`;
+
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
