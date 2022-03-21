@@ -13,6 +13,7 @@ import {
 } from "../components";
 import { NextHead } from "../global/NextHead";
 import portfolioData from "../data/portfolioData.json";
+import { Main } from "../global/GlobalStyle";
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -32,7 +33,9 @@ export default function Home() {
         setShowMenu={setShowMenu}
       /> */}
       {/* <SocialMedia data={portfolioData.socialMedia} /> */}
-      {/* <Hero data={portfolioData.hero} /> */}
+      <Main>
+        <Hero data={portfolioData.hero} />
+      </Main>
       {/* <About data={portfolioData.about} /> */}
       {/* <Qualification data={portfolioData.qualification} /> */}
       {/* <Skills data={portfolioData.skills} /> */}
