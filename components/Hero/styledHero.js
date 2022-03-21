@@ -39,8 +39,6 @@ export const HeroButtons = styled.div`
   gap: 1.5rem;
 `;
 
-export const HeroButton = styled.a``;
-
 export const HeroImage = styled.div`
   width: 160px;
   justify-self: center;

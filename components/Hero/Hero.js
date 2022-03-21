@@ -5,7 +5,6 @@ import {
   HeroName,
   HeroTitle,
   HeroButtons,
-  HeroButton,
   HeroImage,
   HeroSocial,
   HeroSocialLink,
