@@ -70,7 +70,27 @@
   },
   "hero": {
     "profession": "Web Developer",
-    "name": "Omar Hassan"
+    "name": "Omar Hassan",
+    "socialLinks": [
+      {
+        "id": 1,
+        "title": "github",
+        "icon": "bx bxl-github",
+        "href": "https://github.com/oomaar"
+      },
+      {
+        "id": 2,
+        "title": "linkedin",
+        "icon": "bx bxl-linkedin-square",
+        "href": "https://www.linkedin.com/in/omar-hassan-8b1869137/"
+      },
+      {
+        "id": 3,
+        "title": "facebook",
+        "icon": "bx bxl-facebook-square",
+        "href": "https://www.facebook.com/omarhassan16694"
+      }
+    ]
   },
   "socialMedia": [
     {
