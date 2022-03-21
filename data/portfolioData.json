@@ -120,29 +120,9 @@
   },
   "about": {
     "img": "/me.jpg",
-    "years": "3",
-    "experiencePartA": "I am a",
-    "experiencePartB": "Web Developer",
-    "experiencePartC": "who loves to code and cares about people.",
-    "skills": [
-      {
-        "id": 1,
-        "skill": "WEB DEVELOPMENT"
-      },
-      {
-        "id": 2,
-        "skill": "FRONT-END DEVELOPMENT"
-      },
-      {
-        "id": 3,
-        "skill": "WEB APP DEVELOPMENT"
-      },
-      {
-        "id": 4,
-        "skill": "GRAPHIC DESIGN"
-      }
-    ],
-    "cv": "/pdf/Omar-Hassan-CV-2022.pdf"
+    "info": "I am a Web Developer who loves to code and cares about people. I have",
+    "infoSpan": "3",
+    "info2": "years of experince working with React-JS and other frontend technologies."
   },
   "qualification": {
     "sectionBg": "/sections/qualification.jpg",
