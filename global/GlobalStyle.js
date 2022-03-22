@@ -69,7 +69,7 @@ export const SectionTitle = styled.h2`
   color: ${({ theme }) => theme.colors.firstColor};
 `;
 
-export const SectionSubTitle = styled.p`
+export const SectionSubTitle = styled.span`
   text-align: center;
   display: block;
   font-size: ${({ theme }) => theme.font.smallerFont};
