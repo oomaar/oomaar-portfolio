@@ -95,7 +95,7 @@
     }
   ],
   "hero": {
-    "profession": "Web Developer",
+    "profession": "Frontend Developer",
     "name": "Omar Hassan",
     "socialLinks": [
       {
@@ -123,6 +123,98 @@
     "info": "I am a Web Developer who loves to code and cares about people. I have",
     "infoSpan": "3",
     "info2": "years of experince working with React-JS and other frontend technologies."
+  },
+  "skills": {
+    "profession1": "Frontend Skills",
+    "group1Data": [
+      {
+        "id": 1,
+        "name": "HTML & CSS",
+        "level": "Advanced"
+      },
+      {
+        "id": 2,
+        "name": "Javascript",
+        "level": "Advanced"
+      },
+      {
+        "id": 3,
+        "name": "Tailwind-CSS",
+        "level": "Intermediate"
+      },
+      {
+        "id": 4,
+        "name": "Redux",
+        "level": "Intermediate"
+      }
+    ],
+    "group2Data": [
+      {
+        "id": 1,
+        "name": "React-JS",
+        "level": "Advanced"
+      },
+      {
+        "id": 2,
+        "name": "Next-JS",
+        "level": "Advanced"
+      },
+      {
+        "id": 3,
+        "name": "Typescript",
+        "level": "Intermediate"
+      },
+      {
+        "id": 4,
+        "name": "Styled-Components",
+        "level": "Advanced"
+      }
+    ],
+    "profession2": "Backend Skills",
+    "group3Data": [
+      {
+        "id": 1,
+        "name": "Firebase",
+        "level": "Intermediate"
+      },
+      {
+        "id": 2,
+        "name": "Node-JS",
+        "level": "Intermediate"
+      },
+      {
+        "id": 3,
+        "name": "Mongo-DB",
+        "level": "Intermediate"
+      }
+    ],
+    "profession3": "Other Skills",
+    "group4Data": {
+      "part1": [
+        {
+          "id": 1,
+          "name": "Git & Github",
+          "level": "Intermediate"
+        },
+        {
+          "id": 2,
+          "name": "Photoshop",
+          "level": "Intermediate"
+        }
+      ],
+      "part2": [
+        {
+          "id": 3,
+          "name": "Illustrator",
+          "level": "Intermediate"
+        },
+        {
+          "id": 4,
+          "name": "UI/UX Design",
+          "level": "Basic"
+        }
+      ]
+    }
   },
   "qualification": {
     "sectionBg": "/sections/qualification.jpg",
@@ -200,86 +292,6 @@
         "subtitle": "Worex Technology - Egypt",
         "start": "2022",
         "finish": "Now"
-      }
-    ]
-  },
-  "skills": {
-    "img": "/skills.jpg",
-    "title": "My mission is to create an impact",
-    "titleSpan": "globally",
-    "text": "Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone.",
-    "ninja": [
-      {
-        "id": 1,
-        "skill": "HTML & CSS"
-      },
-      {
-        "id": 2,
-        "skill": "Javascript"
-      },
-      {
-        "id": 3,
-        "skill": "React-JS"
-      },
-      {
-        "id": 4,
-        "skill": "Next-JS"
-      },
-      {
-        "id": 5,
-        "skill": "Git & Github"
-      },
-      {
-        "id": 6,
-        "skill": "Tailwind-CSS"
-      },
-      {
-        "id": 7,
-        "skill": "Sass"
-      },
-      {
-        "id": 8,
-        "skill": "Styled-Components"
-      }
-    ],
-    "good": [
-      {
-        "id": 1,
-        "skill": "Node-JS"
-      },
-      {
-        "id": 2,
-        "skill": "Redux"
-      },
-      {
-        "id": 3,
-        "skill": "Typescript"
-      },
-      {
-        "id": 4,
-        "skill": "Express"
-      },
-      {
-        "id": 5,
-        "skill": "Mongo-DB"
-      },
-      {
-        "id": 6,
-        "skill": "Firebase"
-      }
-    ],
-    "cool": [
-      {
-        "id": 1,
-        "skill": "Bootstrap"
-      },
-      {
-        "id": 2,
-        "skill": "UI/UX Design"
-      },
-      {
-        "id": 3,
-        "skill": "Photoshop"
       }
     ]
   },
