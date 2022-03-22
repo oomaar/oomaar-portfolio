@@ -1,65 +1,101 @@
 import React from "react";
-import { Container, Section, SectionTitle } from "../../global/GlobalStyle";
+import {
+  Container,
+  Section,
+  SectionSubTitle,
+  SectionTitle,
+} from "../../global/GlobalStyle";
 import {
   SkillsContainer,
-  SkillsRight,
-  SkillsRightTitle,
-  SkillsRightText,
-  SkillsRightSubTitle,
-  SkillsRightList,
-  SkillsRightListItem,
-  SkillsLeft,
-  SkillsLeftImage,
-  SkillsLeftIcon,
+  SkillsContent,
+  SkillsTitle,
+  SkillsBox,
+  SkillsGroup,
+  SkillsData,
+  SkillsName,
+  SkillsLevel,
 } from "./styledSkills";
 
 export const Skills = ({ data }) => {
-  const ninjaSkills = data.ninja.map((ninja) => (
-    <SkillsRightListItem key={ninja.id}>{ninja.skill}</SkillsRightListItem>
+  const skillsData = data.group1Data.map((data) => (
+    <SkillsData key={data.id}>
+      <i className="bx bxs-badge-check"></i>
+      <div>
+        <SkillsName>{data.name}</SkillsName>
+        <SkillsLevel>{data.level}</SkillsLevel>
+      </div>
+    </SkillsData>
   ));
 
-  const goodSkills = data.good.map((good) => (
-    <SkillsRightListItem key={good.id}>{good.skill}</SkillsRightListItem>
+  const skillsData2 = data.group2Data.map((data) => (
+    <SkillsData key={data.id}>
+      <i className="bx bxs-badge-check"></i>
+      <div>
+        <SkillsName>{data.name}</SkillsName>
+        <SkillsLevel>{data.level}</SkillsLevel>
+      </div>
+    </SkillsData>
   ));
 
-  const coolSkills = data.cool.map((cool) => (
-    <SkillsRightListItem key={cool.id}>{cool.skill}</SkillsRightListItem>
+  const skillsData3 = data.group3Data.map((data) => (
+    <SkillsData key={data.id}>
+      <i className="bx bxs-badge-check"></i>
+      <div>
+        <SkillsName>{data.name}</SkillsName>
+        <SkillsLevel>{data.level}</SkillsLevel>
+      </div>
+    </SkillsData>
+  ));
+
+  const skillsData4 = data.group4Data.part1.map((data) => (
+    <SkillsData key={data.id}>
+      <i className="bx bxs-badge-check"></i>
+      <div>
+        <SkillsName>{data.name}</SkillsName>
+        <SkillsLevel>{data.level}</SkillsLevel>
+      </div>
+    </SkillsData>
+  ));
+
+  const skillsData4part2 = data.group4Data.part2.map((data) => (
+    <SkillsData key={data.id}>
+      <i className="bx bxs-badge-check"></i>
+      <div>
+        <SkillsName>{data.name}</SkillsName>
+        <SkillsLevel>{data.level}</SkillsLevel>
+      </div>
+    </SkillsData>
   ));
 
   return (
-    <Section id="skills" skills>
+    <Section id="skills">
       <Container>
-        <SectionTitle>My Skills</SectionTitle>
+        <SectionSubTitle>My Abilities</SectionSubTitle>
+        <SectionTitle>My Experience</SectionTitle>
         <SkillsContainer>
-          <SkillsRight>
-            <SkillsRightTitle>
-              {data.title} <span>{data.titleSpan}.</span>
-            </SkillsRightTitle>
-            <SkillsRightText>{data.text}</SkillsRightText>
-            <div>
-              <SkillsRightSubTitle>Ninja At</SkillsRightSubTitle>
-              <SkillsRightList>{ninjaSkills}</SkillsRightList>
-            </div>
-            <div>
-              <SkillsRightSubTitle>Good At</SkillsRightSubTitle>
-              <SkillsRightList>{goodSkills}</SkillsRightList>
-            </div>
-            <div>
-              <SkillsRightSubTitle>Cool At</SkillsRightSubTitle>
-              <SkillsRightList>{coolSkills}</SkillsRightList>
-            </div>
-          </SkillsRight>
-          <SkillsLeft>
-            <SkillsLeftImage>
-              <img src="skills.jpg" alt="Dev Image" />
-              <SkillsLeftIcon className="icon-git">
-                <img src="/social/github-sign.png" alt="Github" />
-              </SkillsLeftIcon>
-              <SkillsLeftIcon className="icon-fav">
-                <img src="/favicon.png" alt="Brackets" />
-              </SkillsLeftIcon>
-            </SkillsLeftImage>
-          </SkillsLeft>
+          <SkillsContent>
+            <SkillsTitle>{data.profession1}</SkillsTitle>
+
+            <SkillsBox>
+              <SkillsGroup>{skillsData}</SkillsGroup>
+              <SkillsGroup>{skillsData2}</SkillsGroup>
+            </SkillsBox>
+          </SkillsContent>
+          <SkillsContent>
+            <SkillsTitle>{data.profession2}</SkillsTitle>
+
+            <SkillsBox>
+              <SkillsGroup className="backData">{skillsData3}</SkillsGroup>
+            </SkillsBox>
+          </SkillsContent>
+          <SkillsContent>
+            <SkillsTitle>{data.profession3}</SkillsTitle>
+
+            <SkillsBox>
+              <SkillsGroup>{skillsData4}</SkillsGroup>
+              <SkillsGroup>{skillsData4part2}</SkillsGroup>
+            </SkillsBox>
+          </SkillsContent>
         </SkillsContainer>
       </Container>
     </Section>

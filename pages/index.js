@@ -36,9 +36,9 @@ export default function Home() {
       <Main>
         <Hero data={portfolioData.hero} />
         <About data={portfolioData.about} />
+        <Skills data={portfolioData.skills} />
       </Main>
       {/* <Qualification data={portfolioData.qualification} /> */}
-      {/* <Skills data={portfolioData.skills} /> */}
       {/* <Projects data={portfolioData.projects} /> */}
       {/* <Contact data={portfolioData.contact} /> */}
       {/* <Footer data={portfolioData.footer} /> */}

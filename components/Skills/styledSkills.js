@@ -1,163 +1,58 @@
 import styled from "styled-components";
-import { lgScreen, mdScreen, smScreen } from "../../global/GlobalStyle";
 
 export const SkillsContainer = styled.div`
-  display: flex;
-
-  @media screen and (max-width: ${lgScreen}) {
-    flex-direction: column;
-  }
-`;
-
-export const SkillsRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-
-  @media screen and (max-width: ${lgScreen}) {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  @media screen and (max-width: ${mdScreen}) {
-    padding: 0;
-  }
-`;
-
-export const SkillsRightTitle = styled.h3`
-  font-size: ${({ theme }) => theme.typo.largeTitleFont};
-  width: 18.75rem;
-
-  span {
-    color: ${({ theme }) => theme.lightColors.primaryColor};
-  }
-
-  @media screen and (max-width: ${lgScreen}) {
-    text-align: center;
-    width: 50%;
-    margin: 1.5rem auto 0;
-  }
-
-  @media screen and (max-width: ${mdScreen}) {
-    width: 100%;
-  }
-`;
-
-export const SkillsRightText = styled.p`
-  font-size: ${({ theme }) => theme.typo.textFont};
-  color: ${({ theme }) => theme.lightColors.textColor};
-  width: 30rem;
-
-  @media screen and (max-width: ${lgScreen}) {
-    text-align: center;
-    width: 70%;
-    margin: 1.5rem auto 0;
-  }
-
-  @media screen and (max-width: ${mdScreen}) {
-    width: 100%;
-  }
-`;
-
-export const SkillsRightSubTitle = styled.p`
-  font-size: ${({ theme }) => theme.typo.smallTitleFont};
-  font-weight: 700;
-`;
-
-export const SkillsRightList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem 0;
+  gap: 1.5rem 2rem;
+`;
 
-  @media screen and (max-width: ${mdScreen}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+export const SkillsContent = styled.div`
+  background-color: ${({ theme }) => theme.colors.containerColor};
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+`;
 
-  @media screen and (max-width: ${smScreen}) {
+export const SkillsTitle = styled.h3`
+  font-size: ${({ theme }) => theme.font.normalFont};
+  font-weight: ${({ theme }) => theme.weight.medium};
+  color: ${({ theme }) => theme.colors.firstColor};
+  text-align: center;
+  margin-bottom: 1.5rem;
+`;
+
+export const SkillsBox = styled.div`
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+`;
+
+export const SkillsGroup = styled.div`
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1rem;
+
+  &.backData {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
   }
 `;
 
-export const SkillsRightListItem = styled.li`
-  list-style-type: none;
-  text-transform: uppercase;
-  font-weight: 700;
-`;
-
-export const SkillsLeft = styled.div`
-  width: 30%;
+export const SkillsData = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  column-gap: 0.5rem;
 
-  @media screen and (max-width: ${lgScreen}) {
-    width: 100%;
-    padding: 0 2rem;
+  i {
+    font-size: 1rem;
+    color: ${({ theme }) => theme.colors.firstColor};
+    margin-top: 1rem;
   }
 `;
 
-export const SkillsLeftImage = styled.div`
-  position: relative;
-
-  img {
-    border-radius: 1rem;
-  }
+export const SkillsName = styled.h3`
+  font-size: ${({ theme }) => theme.colors.normalFont};
+  font-weight: ${({ theme }) => theme.font.fontMedium};
+  line-height: 18px;
 `;
 
-export const SkillsLeftIcon = styled.div`
-  width: 70px;
-  height: 70px;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-
-  &.icon-git {
-    right: 5rem;
-    top: -3rem;
-    background-color: hsl(280, 38%, 31%);
-
-    @media screen and (max-width: ${lgScreen}) {
-      top: 0;
-    }
-
-    @media screen and (max-width: ${mdScreen}) {
-      top: -1rem;
-      right: 0;
-    }
-
-    @media screen and (max-width: ${smScreen}) {
-      right: -1rem;
-      top: -3rem;
-    }
-  }
-
-  &.icon-fav {
-    background-color: hsl(43, 100%, 54%);
-    left: -2.5rem;
-    bottom: 50%;
-
-    img {
-      filter: invert(1);
-    }
-
-    @media screen and (max-width: ${lgScreen}) {
-      left: -1rem;
-    }
-
-    @media screen and (max-width: ${smScreen}) {
-      left: -2.5rem;
-    }
-  }
-
-  img {
-    width: 2.5rem;
-    border-radius: 1rem;
-  }
-
-  @media screen and (max-width: ${mdScreen}) {
-    width: 65px;
-    height: 65px;
-  }
+export const SkillsLevel = styled.span`
+  font-size: ${({ theme }) => theme.font.tinyFont};
 `;
