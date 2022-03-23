@@ -79,20 +79,25 @@ export const SectionSubTitle = styled.span`
 // Buttons
 export const Button = styled.a`
   display: inline-block;
-  background-color: ${({ theme, ghost }) =>
-    ghost ? "transparent" : theme.colors.firstColor};
+  background-color: ${({ theme, ghost, link }) =>
+    ghost || link ? "transparent" : theme.colors.firstColor};
   border: ${({ theme, ghost }) =>
     ghost ? `2px solid ${theme.colors.firstColor}` : `2px solid transparent`};
-  color: ${({ theme, ghost }) =>
-    ghost ? theme.colors.firstColor : theme.colors.bodyColor};
+  color: ${({ theme, ghost, link }) =>
+    ghost || link ? theme.colors.firstColor : theme.colors.bodyColor};
   padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: ${({ theme }) => theme.weight.medium};
+  border-radius: ${({ link }) => (link ? "0rem" : "0.5rem")};
+  font-weight: ${({ theme, link }) =>
+    link ? theme.weight.bold : theme.weight.medium};
   transition: all 0.4s ease-in;
+  cursor: pointer;
 
   :hover {
-    background-color: ${({ theme }) => theme.colors.firstColorAlt};
-    color: ${({ theme }) => theme.colors.bodyColor};
+    background-color: ${({ theme, link }) =>
+      link ? "transparent" : theme.colors.firstColorAlt};
+    color: ${({ theme, link }) =>
+      link ? theme.colors.firstColor : theme.colors.bodyColor};
+    transform: ${({ link }) => link && "scale(1.1)"};
   }
 `;
 
