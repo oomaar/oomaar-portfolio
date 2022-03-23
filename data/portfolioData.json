@@ -287,8 +287,17 @@
     ]
   },
   "projects": {
-    "sectionBg": "/projects.jpg",
-    "projectsData": [
+    "work": [
+      {
+        "id": 0,
+        "src": "/portfolio/makeup.jpg",
+        "alt": "Makeup Store Demo",
+        "title": "Makeup Store Demo (ReactJS)",
+        "description": "Developed Fully Responsive with ReactJS and Styled-components.",
+        "url": "https://serene-spence-a7962f.netlify.app/"
+      }
+    ],
+    "hobby": [
       {
         "id": 0,
         "src": "/portfolio/beats-circle.jpg",
@@ -304,17 +313,11 @@
         "title": "Covid-19 Tracker (ReactJS)",
         "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components.",
         "url": "https://covid-19-tracker-16970.web.app/"
-      },
+      }
+    ],
+    "clones": [
       {
-        "id": 2,
-        "src": "/portfolio/makeup.jpg",
-        "alt": "Makeup Store Demo",
-        "title": "Makeup Store Demo (ReactJS)",
-        "description": "Developed Fully Responsive with ReactJS and Styled-components.",
-        "url": "https://serene-spence-a7962f.netlify.app/"
-      },
-      {
-        "id": 3,
+        "id": 0,
         "src": "/portfolio/netflix.jpg",
         "alt": "Netflix Clone",
         "title": "Netflix Clone (ReactJS)",
@@ -322,7 +325,7 @@
         "url": "https://dreamy-meninsky-4d3cd3.netlify.app/"
       },
       {
-        "id": 4,
+        "id": 1,
         "src": "/portfolio/geforce.jpg",
         "alt": "Geforce Clone",
         "title": "Geforce Clone (NextJS)",
@@ -330,7 +333,7 @@
         "url": "https://geforce-clone-oomaar.vercel.app/"
       },
       {
-        "id": 5,
+        "id": 2,
         "src": "/portfolio/twitter.jpg",
         "alt": "Twitter Clone",
         "title": "Twitter Clone (ReactJS)",
