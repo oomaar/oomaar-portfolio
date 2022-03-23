@@ -1,71 +1,51 @@
 import styled from "styled-components";
 
 export const QualificationContainer = styled.div`
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 1rem;
-  border-radius: 1rem;
-  color: #fff;
-  transform: translateY(20%);
-
-  @media screen and (max-width: 568px) {
-    transform: translateY(0);
-  }
+  display: grid;
+  gap: 1.5rem;
 `;
 
 export const QualificationNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 5rem;
 
-  p {
-    font-weight: 700;
-    font-size: ${({ theme }) => theme.typo.smallTitleFont};
-    cursor: pointer;
-    border-bottom: 5px solid transparent;
-    transition: all 0.5s ease-in;
-
-    &.active {
-      border-bottom: 5px solid ${({ theme }) => theme.lightColors.primaryColor};
-      color: ${({ theme }) => theme.lightColors.primaryColor};
-    }
-
-    :hover {
-      border-bottom: 5px solid ${({ theme }) => theme.lightColors.primaryColor};
-      color: ${({ theme }) => theme.lightColors.primaryColor};
-    }
+  .active {
+    border-bottom: 3px solid ${({ theme }) => theme.colors.firstColor};
   }
 `;
 
-export const QualificationTab = styled.div`
+export const QualificationCardsContainer = styled.ul`
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-
-  @media screen and (max-width: 568px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem 0;
 `;
 
-export const QualificationDetails = styled.div`
+export const QualificationCard = styled.li`
   display: flex;
   flex-direction: column;
-  gap: 0.7rem 0;
-  margin: 0 auto;
-  width: 250px;
-  height: 150px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  background: ${({ theme }) => theme.colors.containerColor};
 `;
 
-export const QualificationTitle = styled.p`
-  margin: 0;
-  color: ${({ theme }) => theme.lightColors.primaryColor};
-  font-size: ${({ theme }) => theme.typo.menuLinkFont};
+export const QualificationTitle = styled.h3`
+  font-size: ${({ theme }) => theme.font.h3FontSize};
+  margin-bottom: 2.5rem;
 `;
 
-export const QualificationSubTitle = styled.p`
-  margin: 0;
+export const QualificationSubTitle = styled.span`
+  color: ${({ theme }) => theme.colors.firstColor};
+  font-size: ${({ theme }) => theme.font.smallFont};
 `;
 
-export const QualificationDate = styled.p`
-  margin: 0;
+export const QualificationDate = styled.span`
+  margin-top: 1rem;
+
+  strong {
+    font-size: ${({ theme }) => theme.font.smallerFont};
+  }
 `;

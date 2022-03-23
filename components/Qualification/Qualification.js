@@ -1,64 +1,75 @@
 import {
   QualificationContainer,
   QualificationNav,
-  QualificationTab,
-  QualificationDetails,
+  QualificationCardsContainer,
+  QualificationCard,
   QualificationTitle,
   QualificationSubTitle,
   QualificationDate,
 } from "./styledQualification";
-import { Section, Container, SectionTitle } from "../../global/GlobalStyle";
+import {
+  Section,
+  Container,
+  SectionTitle,
+  SectionSubTitle,
+  Button,
+} from "../../global/GlobalStyle";
 import { useState } from "react";
 
 export const Qualification = ({ data }) => {
   const [activeTab, setActiveTab] = useState("Education");
 
   const educationTab = data.education.map((education) => (
-    <QualificationDetails key={education.id}>
+    <QualificationCard key={education.id}>
       <QualificationTitle>{education.title}</QualificationTitle>
       <QualificationSubTitle>{education.subtitle}</QualificationSubTitle>
       <QualificationDate>
         <strong>{education.start}</strong> - <strong>{education.finish}</strong>
       </QualificationDate>
-    </QualificationDetails>
+    </QualificationCard>
   ));
 
   const workTab = data.work.map((work) => (
-    <QualificationDetails key={work.id}>
+    <QualificationCard key={work.id}>
       <QualificationTitle>{work.title}</QualificationTitle>
       <QualificationSubTitle>{work.subtitle}</QualificationSubTitle>
       <QualificationDate>
         <strong>{work.start}</strong> - <strong>{work.finish}</strong>
       </QualificationDate>
-    </QualificationDetails>
+    </QualificationCard>
   ));
 
   return (
-    <Section id="qualification" image={true} url={data.sectionBg}>
+    <Section id="qualification">
       <Container>
-        <SectionTitle style={{ color: "#fff" }}>My Qualifications</SectionTitle>
+        <SectionSubTitle>My Journey </SectionSubTitle>
+        <SectionTitle>My Qualifications</SectionTitle>
         <QualificationContainer>
           <QualificationNav>
-            <p
-              className={`${activeTab === "Education" ? "active" : ""}`}
+            <Button
+              link
               onClick={() => setActiveTab("Education")}
+              className={`${activeTab === "Education" ? "active" : ""}`}
             >
               Education
-            </p>
-            <p
-              className={`${activeTab === "Work" ? "active" : ""}`}
+            </Button>
+            <Button
+              link
               onClick={() => setActiveTab("Work")}
+              className={`${activeTab === "Work" ? "active" : ""}`}
             >
               Work
-            </p>
+            </Button>
           </QualificationNav>
-          <QualificationTab>
-            {activeTab === "Education"
-              ? educationTab
-              : activeTab === "Work"
-              ? workTab
-              : ""}
-          </QualificationTab>
+          <QualificationCardsContainer>
+            {activeTab === "Education" ? (
+              educationTab
+            ) : activeTab === "Work" ? (
+              workTab
+            ) : (
+              <></>
+            )}
+          </QualificationCardsContainer>
         </QualificationContainer>
       </Container>
     </Section>
