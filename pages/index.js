@@ -38,8 +38,8 @@ export default function Home() {
         <About data={portfolioData.about} />
         <Skills data={portfolioData.skills} />
         <Qualification data={portfolioData.qualification} />
+        <Projects data={portfolioData.projects} />
       </Main>
-      {/* <Projects data={portfolioData.projects} /> */}
       {/* <Contact data={portfolioData.contact} /> */}
       {/* <Footer data={portfolioData.footer} /> */}
     </div>
