@@ -217,12 +217,10 @@
     }
   },
   "qualification": {
-    "sectionBg": "/sections/qualification.jpg",
     "education": [
       {
         "id": "1",
         "category": "education",
-        "position": "left",
         "title": "Computer Science",
         "subtitle": "Cairo - Future University in Egypt (FUE)",
         "start": "2012",
@@ -231,7 +229,6 @@
       {
         "id": "2",
         "category": "education",
-        "position": "left",
         "title": "Graphic Design",
         "subtitle": "Cairo - Russian Cultural Center",
         "start": "2017",
@@ -240,7 +237,6 @@
       {
         "id": "3",
         "category": "education",
-        "position": "right",
         "title": "Web Development Course ",
         "subtitle": "Cairo - Future University in Egypt (FUE)",
         "start": "2018",
@@ -249,7 +245,6 @@
       {
         "id": "4",
         "category": "education",
-        "position": "right",
         "title": "Full-Stack",
         "subtitle": "UK - App Brewery",
         "start": "2019",
@@ -260,7 +255,6 @@
       {
         "id": "1",
         "category": "work",
-        "position": "right",
         "title": "Software Enginner",
         "subtitle": "PAS - Cairo",
         "start": "2016",
@@ -269,7 +263,6 @@
       {
         "id": "2",
         "category": "work",
-        "position": "left",
         "title": "Graphic Designer",
         "subtitle": "Up for Cairo - Cairo",
         "start": "2018",
@@ -278,7 +271,6 @@
       {
         "id": "3",
         "category": "work",
-        "position": "left",
         "title": "Freelance",
         "subtitle": "Home - Egypt",
         "start": "2019",
@@ -287,9 +279,8 @@
       {
         "id": "4",
         "category": "work",
-        "position": "left",
         "title": "Internship",
-        "subtitle": "Worex Technology - Egypt",
+        "subtitle": "Worex Technology - Cairo",
         "start": "2022",
         "finish": "Now"
       }
