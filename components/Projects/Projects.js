@@ -18,7 +18,7 @@ export const Projects = ({ data }) => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const workProjects = data.work.map((work) => (
-    <ProjectsCard>
+    <ProjectsCard key={work.id}>
       <img src={work.src} alt={work.alt} />
       <ProjectsCardTitle>{work.title}</ProjectsCardTitle>
       <ProjectsCardButton href={work.url}>
@@ -28,7 +28,7 @@ export const Projects = ({ data }) => {
   ));
 
   const hobbyProjects = data.hobby.map((hobby) => (
-    <ProjectsCard>
+    <ProjectsCard key={hobby.id}>
       <img src={hobby.src} alt={hobby.alt} />
       <ProjectsCardTitle>{hobby.title}</ProjectsCardTitle>
       <ProjectsCardButton href={hobby.url}>
@@ -38,7 +38,7 @@ export const Projects = ({ data }) => {
   ));
 
   const clonesProjects = data.clones.map((clones) => (
-    <ProjectsCard>
+    <ProjectsCard key={clones.id}>
       <img src={clones.src} alt={clones.alt} />
       <ProjectsCardTitle>{clones.title}</ProjectsCardTitle>
       <ProjectsCardButton href={clones.url}>
@@ -52,16 +52,28 @@ export const Projects = ({ data }) => {
       <SectionSubTitle>My Portfolio</SectionSubTitle>
       <SectionTitle>Recent Projects</SectionTitle>
       <ProjectsNav>
-        <ProjectsNavLink onClick={() => setActiveCategory("All")}>
+        <ProjectsNavLink
+          onClick={() => setActiveCategory("All")}
+          className={`${activeCategory === "All" ? "active" : ""}`}
+        >
           All
         </ProjectsNavLink>
-        <ProjectsNavLink onClick={() => setActiveCategory("Work")}>
+        <ProjectsNavLink
+          onClick={() => setActiveCategory("Work")}
+          className={`${activeCategory === "Work" ? "active" : ""}`}
+        >
           Work
         </ProjectsNavLink>
-        <ProjectsNavLink onClick={() => setActiveCategory("Hobby")}>
+        <ProjectsNavLink
+          onClick={() => setActiveCategory("Hobby")}
+          className={`${activeCategory === "Hobby" ? "active" : ""}`}
+        >
           Hobby
         </ProjectsNavLink>
-        <ProjectsNavLink onClick={() => setActiveCategory("Clones")}>
+        <ProjectsNavLink
+          onClick={() => setActiveCategory("Clones")}
+          className={`${activeCategory === "Clones" ? "active" : ""}`}
+        >
           Clones
         </ProjectsNavLink>
       </ProjectsNav>
