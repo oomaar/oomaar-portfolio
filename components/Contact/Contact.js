@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import {
+  Button,
   Container,
   Section,
   SectionSubTitle,
@@ -8,11 +9,17 @@ import {
 } from "../../global/GlobalStyle";
 import {
   ContactContainer,
+  ContactContent,
+  ContactTitle,
   ContactInfo,
+  ContactCard,
+  ContactCardTitle,
+  ContactCardData,
+  ContactButton,
   ContactForm,
-  FormHeader,
-  InfoContainer,
-  InputsContainer,
+  FormInputContainer,
+  FormLabel,
+  FormInput,
 } from "./styledContact";
 
 export const Contact = ({ data }) => {
@@ -59,27 +66,38 @@ export const Contact = ({ data }) => {
   //   }
   // } catch (err) {}
 
+  const contactCards = data.cards.map((card) => (
+    <ContactCard key={card.id}>
+      <i className={card.icon}></i>
+      <ContactCardTitle>{card.text}</ContactCardTitle>
+      <ContactCardData>{card.data}</ContactCardData>
+      <ContactButton href={card.href} target="_blank">
+        Write me <i className="bx bx-right-arrow-alt"></i>
+      </ContactButton>
+    </ContactCard>
+  ));
+
   return (
     <Section id="contact">
       <SectionSubTitle>Get in touch</SectionSubTitle>
       <SectionTitle>Contact Me</SectionTitle>
       <Container>
         <ContactContainer>
-          <ContactInfo>
-            <InfoContainer>
-              <p>{data.address}</p>
-              <p>{data.phone}</p>
-              <p>{data.email}</p>
-            </InfoContainer>
-          </ContactInfo>
+          <ContactContent>
+            <ContactTitle>Talk to me</ContactTitle>
+            <ContactInfo>{contactCards}</ContactInfo>
+          </ContactContent>
+
+          <ContactContent>
+            <ContactTitle>Write to me your project</ContactTitle>
+          </ContactContent>
+
           <ContactForm onSubmit={handleSubmit(onSubmitForm)}>
-            <FormHeader>
-              {data.text} <span>{data.textSpan}</span>
-            </FormHeader>
-            <InputsContainer>
-              <input
+            <FormInputContainer>
+              <FormLabel>Name</FormLabel>
+              <FormInput
                 type="text"
-                placeholder="Name"
+                placeholder="Insert your name"
                 ref={register}
                 {...register("name", {
                   required: {
@@ -90,9 +108,13 @@ export const Contact = ({ data }) => {
                 name="name"
               />
               <span>{errors?.name?.message}</span>
-              <input
+            </FormInputContainer>
+
+            <FormInputContainer>
+              <FormLabel>Mail</FormLabel>
+              <FormInput
                 type="email"
-                placeholder="Email"
+                placeholder="Insert your email"
                 {...register("email", {
                   required: {
                     value: true,
@@ -106,10 +128,14 @@ export const Contact = ({ data }) => {
                 name="email"
               />
               <span>{errors?.email?.message}</span>
+            </FormInputContainer>
+
+            <FormInputContainer>
+              <FormLabel>Message</FormLabel>
               <textarea
+                placeholder="Write your message"
                 cols="30"
                 rows="10"
-                placeholder="Message"
                 name="message"
                 {...register("message", {
                   required: {
@@ -119,8 +145,8 @@ export const Contact = ({ data }) => {
                 })}
               ></textarea>
               <span>{errors?.message?.message}</span>
-              <button type="submit">Send</button>
-            </InputsContainer>
+            </FormInputContainer>
+            <Button type="submit">Send</Button>
           </ContactForm>
         </ContactContainer>
       </Container>
