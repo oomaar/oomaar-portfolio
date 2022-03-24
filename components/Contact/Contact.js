@@ -21,6 +21,7 @@ import {
   FormLabel,
   FormInput,
   FormTextAreaContainer,
+  FormButton,
 } from "./styledContact";
 
 export const Contact = ({ data }) => {
@@ -150,7 +151,7 @@ export const Contact = ({ data }) => {
               ></textarea>
               <span>{errors?.message?.message}</span>
             </FormTextAreaContainer>
-            <Button type="submit">Send Message</Button>
+            <FormButton type="submit">Send Message</FormButton>
           </ContactForm>
         </ContactContainer>
       </Container>

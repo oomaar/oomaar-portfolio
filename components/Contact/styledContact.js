@@ -132,3 +132,19 @@ export const FormTextAreaContainer = styled.div`
     resize: none;
   }
 `;
+
+export const FormButton = styled.button`
+  display: inline-block;
+  background-color: ${({ theme }) => theme.colors.firstColor};
+  color: ${({ theme }) => theme.colors.bodyColor};
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: ${({ theme }) => theme.weight.medium};
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.firstColorAlt};
+    color: ${({ theme }) => theme.colors.bodyColor};
+  }
+`;
