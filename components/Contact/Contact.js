@@ -20,6 +20,7 @@ import {
   FormInputContainer,
   FormLabel,
   FormInput,
+  FormTextAreaContainer,
 } from "./styledContact";
 
 export const Contact = ({ data }) => {
@@ -72,7 +73,7 @@ export const Contact = ({ data }) => {
       <ContactCardTitle>{card.text}</ContactCardTitle>
       <ContactCardData>{card.data}</ContactCardData>
       <ContactButton href={card.href} target="_blank">
-        Write me <i className="bx bx-right-arrow-alt"></i>
+        Let's Chat <i className="bx bx-right-arrow-alt"></i>
       </ContactButton>
     </ContactCard>
   ));
@@ -98,6 +99,7 @@ export const Contact = ({ data }) => {
               <FormInput
                 type="text"
                 placeholder="Insert your name"
+                autoComplete="off"
                 ref={register}
                 {...register("name", {
                   required: {
@@ -115,6 +117,7 @@ export const Contact = ({ data }) => {
               <FormInput
                 type="email"
                 placeholder="Insert your email"
+                autoComplete="off"
                 {...register("email", {
                   required: {
                     value: true,
@@ -130,10 +133,11 @@ export const Contact = ({ data }) => {
               <span>{errors?.email?.message}</span>
             </FormInputContainer>
 
-            <FormInputContainer>
+            <FormTextAreaContainer>
               <FormLabel>Message</FormLabel>
               <textarea
                 placeholder="Write your message"
+                autoComplete="off"
                 cols="30"
                 rows="10"
                 name="message"
@@ -145,8 +149,8 @@ export const Contact = ({ data }) => {
                 })}
               ></textarea>
               <span>{errors?.message?.message}</span>
-            </FormInputContainer>
-            <Button type="submit">Send</Button>
+            </FormTextAreaContainer>
+            <Button type="submit">Send Message</Button>
           </ContactForm>
         </ContactContainer>
       </Container>
