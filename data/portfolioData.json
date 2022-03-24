@@ -343,11 +343,29 @@
     ]
   },
   "contact": {
-    "address": "Egypt - Cairo - Heliopolis",
-    "phone": "(002) 01140125555",
-    "email": "omaar_5@hotmail.com",
-    "text": "Let's grab a coffee and jump on conversation",
-    "textSpan": "chat with me."
+    "cards": [
+      {
+        "id": 1,
+        "text": "Email",
+        "data": "omaar_5@hotmail.com",
+        "icon": "bx bx-mail-send",
+        "href": "mailto:omaar_5@hotmail.com"
+      },
+      {
+        "id": 2,
+        "text": "Whatsapp",
+        "data": "(002) 01140125555",
+        "icon": "bx bxl-whatsapp",
+        "href": "https://api.whatsapp.com/send?phone=00201140125555"
+      },
+      {
+        "id": 3,
+        "text": "Messenger",
+        "data": "user.omarhassan16694",
+        "icon": "bx bxl-messenger",
+        "href": "https://m.me/omarhassan16694"
+      }
+    ]
   },
   "footer": {
     "info": {
