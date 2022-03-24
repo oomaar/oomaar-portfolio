@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { Container, Section, SectionTitle } from "../../global/GlobalStyle";
+import {
+  Container,
+  Section,
+  SectionSubTitle,
+  SectionTitle,
+} from "../../global/GlobalStyle";
 import {
   ContactContainer,
   ContactInfo,
@@ -56,8 +61,9 @@ export const Contact = ({ data }) => {
 
   return (
     <Section id="contact">
+      <SectionSubTitle>Get in touch</SectionSubTitle>
+      <SectionTitle>Contact Me</SectionTitle>
       <Container>
-        <SectionTitle>Contact Me</SectionTitle>
         <ContactContainer>
           <ContactInfo>
             <InfoContainer>

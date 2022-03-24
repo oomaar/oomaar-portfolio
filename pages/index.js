@@ -39,8 +39,8 @@ export default function Home() {
         <Skills data={portfolioData.skills} />
         <Qualification data={portfolioData.qualification} />
         <Projects data={portfolioData.projects} />
+        <Contact data={portfolioData.contact} />
       </Main>
-      {/* <Contact data={portfolioData.contact} /> */}
       {/* <Footer data={portfolioData.footer} /> */}
     </div>
   );
