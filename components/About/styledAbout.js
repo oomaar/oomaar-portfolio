@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tabletScreen } from "../../global/GlobalStyle";
 
 export const AboutContainer = styled.div`
   display: grid;
@@ -19,6 +20,10 @@ export const AboutInfo = styled.div`
   p {
     font-size: ${({ theme }) => theme.font.normalFont};
     margin-bottom: 2rem;
+
+    @media screen and (min-width: ${tabletScreen}) {
+      padding: 0 5rem;
+    }
 
     span {
       font-size: ${({ theme }) => theme.font.h1Font};
