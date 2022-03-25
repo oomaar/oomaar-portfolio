@@ -19,6 +19,7 @@ export const FooterList = styled.ul`
   justify-content: center;
   gap: 0 1.5rem;
   margin-bottom: 2rem;
+  padding: 0;
 `;
 
 export const FooterLink = styled.a`
@@ -29,6 +30,7 @@ export const FooterSocialList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 0 1.25rem;
+  padding: 0;
 `;
 
 export const FooterSocialLink = styled.a`
