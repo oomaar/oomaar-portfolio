@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { light, primaryHue, saturation } from "../../global/GlobalStyle";
+import {
+  light,
+  mobileScreen,
+  primaryHue,
+  saturation,
+} from "../../global/GlobalStyle";
 
 export const HeroContainer = styled.section`
   display: grid;
@@ -37,11 +42,19 @@ export const HeroButtons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+
+  @media screen and (max-width: ${mobileScreen}) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const HeroImage = styled.div`
   width: 160px;
   justify-self: center;
+
+  @media screen and (max-width: ${mobileScreen}) {
+    width: 150px;
+  }
 `;
 
 export const HeroSocial = styled.div`
