@@ -54,11 +54,19 @@ export const QualificationCard = styled.li`
 export const QualificationTitle = styled.h3`
   font-size: ${({ theme }) => theme.font.h3FontSize};
   margin-bottom: 2.5rem;
+
+  @media screen and (min-width: 968px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const QualificationSubTitle = styled.span`
   color: ${({ theme }) => theme.colors.firstColor};
   font-size: ${({ theme }) => theme.font.smallFont};
+
+  @media screen and (min-width: 968px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const QualificationDate = styled.span`
@@ -66,5 +74,9 @@ export const QualificationDate = styled.span`
 
   strong {
     font-size: ${({ theme }) => theme.font.smallerFont};
+
+    @media screen and (min-width: 968px) {
+      font-size: 0.813rem;
+    }
   }
 `;

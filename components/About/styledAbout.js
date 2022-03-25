@@ -43,6 +43,10 @@ export const AboutInfo = styled.div`
       margin-bottom: 2.5rem;
     }
 
+    @media screen and (min-width: 968px) {
+      font-size: 1rem;
+    }
+
     span {
       font-size: ${({ theme }) => theme.font.h1Font};
       color: ${({ theme }) => theme.colors.firstColor};

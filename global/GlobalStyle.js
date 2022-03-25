@@ -124,6 +124,10 @@ export const SectionSubTitle = styled.span`
   display: block;
   font-size: ${({ theme }) => theme.font.smallerFont};
   color: ${({ theme }) => theme.colors.sectionSubtitleColor};
+
+  @media screen and (min-width: 968px) {
+    font-size: 0.813rem;
+  }
 `;
 
 // Buttons
@@ -170,6 +174,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.bodyFont};
     font-size: ${({ theme }) => theme.font.normalFont};
     transition: all 0.4s ease-in;
+
+    @media screen and (min-width: 968px) {
+        font-size: 1rem;
+    }
   }
 
   button {
@@ -178,12 +186,20 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: 0;
     outline: 0;
+
+    @media screen and (min-width: 968px) {
+        font-size: 1rem;
+    }
   }
 
   input,
   textarea {
     font-family: ${({ theme }) => theme.font.bodyFont};
     font-size: ${({ theme }) => theme.font.normalFont};
+
+    @media screen and (min-width: 968px) {
+        font-size: 1rem;
+    }
   }
 
   h1,
@@ -227,4 +243,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.firstColor};
     color: #000;
   }
+
+
 `;

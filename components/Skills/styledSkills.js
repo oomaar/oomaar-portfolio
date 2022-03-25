@@ -33,6 +33,10 @@ export const SkillsTitle = styled.h3`
   color: ${({ theme }) => theme.colors.firstColor};
   text-align: center;
   margin-bottom: 1.5rem;
+
+  @media screen and (min-width: 968px) {
+    font-size: 1rem;
+  }
 `;
 
 export const SkillsBox = styled.div`
@@ -74,6 +78,10 @@ export const SkillsName = styled.h3`
 
   @media screen and (max-width: ${mobileScreen}) {
     font-size: ${({ theme }) => theme.font.smallFont};
+  }
+
+  @media screen and (min-width: 968px) {
+    font-size: 1rem;
   }
 `;
 

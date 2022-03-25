@@ -28,6 +28,14 @@ export const HeroName = styled.h1`
     display: block;
     color: ${({ theme }) => theme.colors.titleColor};
     margin-bottom: 1.25rem;
+
+    @media screen and (min-width: 968px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media screen and (min-width: 968px) {
+    font-size: 2.5rem;
   }
 `;
 
@@ -36,6 +44,10 @@ export const HeroTitle = styled.h3`
   font-weight: ${({ theme }) => theme.weight.medium};
   color: ${({ theme }) => theme.colors.textColor};
   margin-bottom: 2.5rem;
+
+  @media screen and (min-width: 968px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const HeroButtons = styled.div`
@@ -115,6 +127,10 @@ export const HomeScroll = styled.a`
   span {
     font-size: ${({ theme }) => theme.font.smallerFont};
     transform: rotate(-90deg);
+
+    @media screen and (min-width: 968px) {
+      font-size: 0.813rem;
+    }
   }
 `;
 

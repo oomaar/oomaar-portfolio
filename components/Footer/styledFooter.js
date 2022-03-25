@@ -56,8 +56,16 @@ export const FooterCopy = styled.span`
   text-align: center;
   font-size: ${({ theme }) => theme.font.smallerFont};
 
+  @media screen and (min-width: 968px) {
+    font-size: 0.813rem;
+  }
+
   span {
     font-size: ${({ theme }) => theme.font.normalFont};
     color: #fff;
+
+    @media screen and (min-width: 968px) {
+      font-size: 1rem;
+    }
   }
 `;

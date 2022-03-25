@@ -82,12 +82,16 @@ export const ProjectsCard = styled.div`
 `;
 
 export const ProjectsCardTitle = styled.h3`
-  font-size: ${({ theme }) => theme.font.normalFontSize};
+  font-size: ${({ theme }) => theme.font.normalFont};
   font-weight: ${({ theme }) => theme.weight.medium};
   margin-bottom: 0.25rem;
 
   @media screen and (min-width: ${largeScreen}) {
     margin-bottom: 0.5rem;
+  }
+
+  @media screen and (min-width: 968px) {
+    font-size: 1rem;
   }
 `;
 

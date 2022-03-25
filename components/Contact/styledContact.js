@@ -27,6 +27,10 @@ export const ContactTitle = styled.h3`
   text-align: center;
   font-size: ${({ theme }) => theme.font.h3Font};
   margin-bottom: 1.5rem;
+
+  @media screen and (min-width: 968px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const ContactInfo = styled.div`
@@ -124,6 +128,10 @@ export const FormLabel = styled.label`
   padding: 0.25rem;
   background-color: ${({ theme }) => theme.colors.bodyColor};
   z-index: 10;
+
+  @media screen and (min-width: 968px) {
+    font-size: 0.813rem;
+  }
 `;
 
 export const FormInput = styled.input`
