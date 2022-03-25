@@ -26,7 +26,7 @@ export const ProjectsNavLink = styled.span`
   border-radius: 0.5rem;
 
   &.active {
-    color: ${({ theme }) => theme.colors.bodyColor};
+    color: ${({ theme }) => theme.colors.linksAndButtonsColor};
     background-color: ${({ theme }) => theme.colors.firstColor};
   }
 `;
@@ -41,6 +41,7 @@ export const ProjectsCard = styled.div`
   background: ${({ theme }) => theme.colors.containerColor};
   padding: 1rem;
   border-radius: 1rem;
+  box-shadow: ${({ theme }) => theme.colors.containerShadow};
 
   img {
     border-radius: 1rem;

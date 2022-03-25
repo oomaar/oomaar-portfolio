@@ -53,8 +53,9 @@ export const HeroSocial = styled.div`
   ::after {
     content: "";
     width: 32px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.firstColor};
+    height: 3px;
+    border-radius: 10rem;
+    background-color: ${({ theme }) => theme.colors.heroSocialAfter};
     transform: rotate(90deg) translate(16px, 3px);
   }
 `;
@@ -62,7 +63,7 @@ export const HeroSocial = styled.div`
 export const HeroSocialLink = styled.a`
   width: max-content;
   background-color: ${({ theme }) => theme.colors.containerColor};
-  color: ${({ theme }) => theme.colors.firstColor};
+  color: ${({ theme }) => theme.colors.iconColor};
   padding: 0.25rem;
   border-radius: 0.25rem;
   font-size: 1.2rem;
@@ -82,7 +83,7 @@ export const HomeScroll = styled.a`
   display: grid;
   row-gap: 2.25rem;
   justify-items: center;
-  color: ${({ theme }) => theme.colors.firstColor};
+  color: ${({ theme }) => theme.colors.iconColor};
 
   span {
     font-size: ${({ theme }) => theme.font.smallerFont};

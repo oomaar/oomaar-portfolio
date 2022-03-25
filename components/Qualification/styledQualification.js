@@ -12,6 +12,7 @@ export const QualificationNav = styled.nav`
 
   .active {
     border-bottom: 3px solid ${({ theme }) => theme.colors.firstColor};
+    color: ${({ theme }) => theme.colors.firstColor} !important;
   }
 `;
 
@@ -30,6 +31,7 @@ export const QualificationCard = styled.li`
   padding: 2rem 1.5rem 1.5rem;
   border-radius: 1rem;
   background: ${({ theme }) => theme.colors.containerColor};
+  box-shadow: ${({ theme }) => theme.colors.containerShadow};
 `;
 
 export const QualificationTitle = styled.h3`

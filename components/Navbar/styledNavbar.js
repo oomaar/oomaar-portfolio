@@ -14,8 +14,8 @@ export const Header = styled.header`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.bodyColor};
   z-index: ${({ theme }) => theme.zIndex.zFixed};
-  box-shadow: ${({ navShadow }) =>
-    navShadow && "0 4px 4px hsla(0, 0%, 4%, 0.3)"};
+  box-shadow: ${({ navShadow, theme }) =>
+    navShadow && theme.colors.navShadowColor};
 `;
 
 export const Nav = styled.nav`
@@ -42,7 +42,7 @@ export const NavMenu = styled.div`
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-color: hsla(${secondaryHue}, 32%, 16%, 0.8);
+  background-color: ${({ theme }) => theme.colors.navColor};
   width: 80%;
   border-radius: 4rem;
   padding: 0.1rem 1.25rem;
@@ -56,7 +56,12 @@ export const NavbarList = styled.ul`
   padding: 0;
 `;
 
-export const NavbarItem = styled.li``;
+export const NavbarItem = styled.li`
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+`;
 
 export const NavbarLink = styled.a`
   color: ${({ theme }) => theme.colors.textColor};
@@ -72,7 +77,16 @@ export const NavbarLink = styled.a`
       hsla(${primaryHue}, ${saturation}, ${light}, 0.2)
     );
     box-shadow: 0 0 16px hsla(${primaryHue}, ${saturation}, ${light}, 0.4);
+    color: ${({ theme }) => theme.colors.titleColor};
   }
 `;
 
-export const NavThemeButton = styled.div``;
+export const NavThemeButton = styled.div`
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  :hover {
+    color: ${({ theme }) => theme.colors.firstColor};
+  }
+`;

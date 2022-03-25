@@ -26,7 +26,8 @@ export const lightTheme = {
     heroSocialShadow: `0 2px 8px hsla(${secondaryHue}, "48%", "8%", 0.1)`,
     heroSocialAfter: `hsl(${secondaryHue}, 15%, 15%)`,
     linksAndButtonsColor: `hsl(${secondaryHue}, 15%, 15%)`,
-    containerShaodw: `0 2px 16px hsla(${secondaryHue}, 48%, 8%, 0.1)`,
+    containerShadow: `0 2px 16px hsla(${secondaryHue}, 48%, 8%, 0.1)`,
+    iconColor: `hsl(${secondaryHue}, 15%, 15%)`,
   },
 };
 
@@ -44,8 +45,9 @@ export const darkTheme = {
     sectionSubtitleColor: `hsl(${secondaryHue}, 4%, 55%)`,
     heroSocialShadow: ``,
     heroSocialAfter: `hsl(${primaryHue}, ${saturation}, ${light})`,
-    linksAndButtonsColor: `hsl(${primaryHue}, ${saturation}, ${light})`,
-    containerShaodw: ``,
+    linksAndButtonsColor: `#fff`,
+    containerShadow: ``,
+    iconColor: `hsl(${primaryHue}, ${saturation}, ${light})`,
   },
 };
 
@@ -110,7 +112,9 @@ export const Button = styled.a`
   border: ${({ theme, ghost }) =>
     ghost ? `2px solid ${theme.colors.firstColor}` : `2px solid transparent`};
   color: ${({ theme, ghost, link }) =>
-    ghost || link ? theme.colors.firstColor : theme.colors.bodyColor};
+    ghost || link
+      ? theme.colors.titleColor
+      : theme.colors.linksAndButtonsColor};
   padding: 0.75rem 1rem;
   border-radius: ${({ link }) => (link ? "0rem" : "0.5rem")};
   font-weight: ${({ theme, link }) =>
@@ -122,7 +126,7 @@ export const Button = styled.a`
     background-color: ${({ theme, link }) =>
       link ? "transparent" : theme.colors.firstColorAlt};
     color: ${({ theme, link }) =>
-      link ? theme.colors.firstColor : theme.colors.bodyColor};
+      link ? theme.colors.firstColor : theme.colors.linksAndButtonsColor};
     transform: ${({ link }) => link && "scale(1.1)"};
   }
 `;

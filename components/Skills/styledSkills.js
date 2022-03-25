@@ -10,6 +10,7 @@ export const SkillsContent = styled.div`
   background-color: ${({ theme }) => theme.colors.containerColor};
   padding: 1.5rem;
   border-radius: 1.25rem;
+  box-shadow: ${({ theme }) => theme.colors.containerShadow};
 `;
 
 export const SkillsTitle = styled.h3`

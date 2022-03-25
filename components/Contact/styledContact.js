@@ -24,6 +24,7 @@ export const ContactCard = styled.div`
   padding: 1rem;
   border-radius: 0.75rem;
   text-align: center;
+  box-shadow: ${({ theme }) => theme.colors.containerShadow};
 
   i {
     font-size: 2rem;
@@ -63,7 +64,11 @@ export const ContactButton = styled.a`
   }
 `;
 
-export const ContactForm = styled.form``;
+export const ContactForm = styled.form`
+  box-shadow: ${({ theme }) => theme.colors.containerShadow};
+  padding: 1rem;
+  border-radius: 1rem;
+`;
 
 export const FormInputContainer = styled.div`
   position: relative;
@@ -139,7 +144,7 @@ export const FormTextAreaContainer = styled.div`
 export const FormButton = styled.button`
   display: inline-block;
   background-color: ${({ theme }) => theme.colors.firstColor};
-  color: ${({ theme }) => theme.colors.bodyColor};
+  color: ${({ theme }) => theme.colors.linksAndButtonsColor};
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-weight: ${({ theme }) => theme.weight.medium};
