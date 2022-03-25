@@ -89,6 +89,10 @@ export const theme = {
 export const Container = styled.div`
   max-width: 968px;
   margin: 0 1rem;
+
+  @media screen and (min-width: ${largeScreen}) {
+    margin: 0 auto;
+  }
 `;
 
 export const Main = styled.main`
@@ -98,6 +102,10 @@ export const Main = styled.main`
 
 export const Section = styled.section`
   padding: 4.5rem 0 1rem;
+
+  @media screen and (min-width: ${largeScreen}) {
+    padding: 6.5rem 0 1rem;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -105,6 +113,10 @@ export const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.font.h2Font};
   margin-bottom: 2rem;
   color: ${({ theme }) => theme.colors.firstColor};
+
+  @media screen and (min-width: ${largeScreen}) {
+    margin-bottom: 3.5rem;
+  }
 `;
 
 export const SectionSubTitle = styled.span`
