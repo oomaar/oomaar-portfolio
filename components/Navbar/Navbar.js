@@ -10,8 +10,9 @@ import {
   NavbarLink,
 } from "./styledNavbar";
 
-export const Navbar = ({ data }) => {
+export const Navbar = ({ data, toggleTheme, checkTheme }) => {
   const [navShadow, setNavShadow] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
 
   const handleNavShadow = () =>
     window.scrollY > 10 ? setNavShadow(true) : setNavShadow(false);
@@ -24,7 +25,8 @@ export const Navbar = ({ data }) => {
     <NavbarItem key={link.id}>
       <NavbarLink
         href={link.href}
-        className={link.id === "nav-link-1" && "active"}
+        onClick={() => setActiveLink(link.id)}
+        className={link.id === activeLink && "active"}
       >
         <i className={link.icon}></i>
       </NavbarLink>
@@ -40,8 +42,23 @@ export const Navbar = ({ data }) => {
           <NavbarList>{navbarLinks}</NavbarList>
         </NavMenu>
         <NavThemeButton>
-          <i className="bx bx-moon"></i>
-          {/* <i className="bx bx-sun"></i> */}
+          {toggleTheme === "dark" ? (
+            <i
+              className="bx bx-sun"
+              onClick={() => {
+                checkTheme();
+                // localStorage.setItem("omars-dark-value", "light");
+              }}
+            ></i>
+          ) : (
+            <i
+              className="bx bx-moon"
+              onClick={() => {
+                checkTheme();
+                // localStorage.setItem("omars-dark-value", "dark");
+              }}
+            ></i>
+          )}
         </NavThemeButton>
       </Nav>
     </Header>
