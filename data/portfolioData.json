@@ -391,18 +391,18 @@
     "social": [
       {
         "id": 1,
-        "icon": "bx bx-mail-send",
-        "href": "mailto:omaar_5@hotmail.com"
+        "icon": "bx bxl-github",
+        "href": "https://github.com/oomaar"
       },
       {
         "id": 2,
-        "icon": "bx bxl-whatsapp",
-        "href": "https://api.whatsapp.com/send?phone=00201140125555"
+        "icon": "bx bxl-linkedin-square",
+        "href": "https://www.linkedin.com/in/omar-hassan-8b1869137/"
       },
       {
         "id": 3,
-        "icon": "bx bxl-messenger",
-        "href": "https://m.me/omarhassan16694"
+        "icon": "bx bxl-facebook-square",
+        "href": "https://www.facebook.com/omarhassan16694"
       }
     ]
   }
