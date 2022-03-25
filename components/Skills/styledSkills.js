@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mobileScreen } from "../../global/GlobalStyle";
+import { mobileScreen, tabletScreen } from "../../global/GlobalStyle";
 
 export const SkillsContainer = styled.div`
   display: grid;
@@ -12,6 +12,10 @@ export const SkillsContent = styled.div`
   padding: 1.5rem;
   border-radius: 1.25rem;
   box-shadow: ${({ theme }) => theme.colors.containerShadow};
+
+  @media screen and (min-width: ${tabletScreen}) {
+    padding: 2rem 4rem;
+  }
 `;
 
 export const SkillsTitle = styled.h3`
