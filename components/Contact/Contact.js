@@ -97,70 +97,70 @@ export const Contact = ({ data }) => {
 
           <ContactContent>
             <ContactTitle>Write to me your project</ContactTitle>
+
+            <ContactForm onSubmit={handleSubmit(onSubmitForm)}>
+              {successForm}
+              <FormInputContainer>
+                <FormLabel>Name</FormLabel>
+                <FormInput
+                  errors={errors?.name}
+                  type="text"
+                  placeholder="Insert your name"
+                  autoComplete="off"
+                  ref={register}
+                  {...register("name", {
+                    required: {
+                      value: true,
+                      message: "Please enter your name",
+                    },
+                  })}
+                  name="name"
+                />
+                <FormError>{errors?.name?.message}</FormError>
+              </FormInputContainer>
+
+              <FormInputContainer>
+                <FormLabel>Mail</FormLabel>
+                <FormInput
+                  errors={errors?.email}
+                  type="email"
+                  placeholder="Insert your email"
+                  autoComplete="off"
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "Please enter your email",
+                    },
+                    pattern: {
+                      value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]+$/i,
+                      message: "This need to be a valid email address",
+                    },
+                  })}
+                  name="email"
+                />
+                <FormError>{errors?.email?.message}</FormError>
+              </FormInputContainer>
+
+              <FormTextAreaContainer errors={errors?.message}>
+                <FormLabel>Message</FormLabel>
+                <textarea
+                  placeholder="Write your message"
+                  autoComplete="off"
+                  cols="30"
+                  rows="10"
+                  name="message"
+                  {...register("message", {
+                    required: {
+                      value: true,
+                      message: "What's on Your Mind ??!",
+                    },
+                  })}
+                ></textarea>
+                <FormError>{errors?.message?.message}</FormError>
+              </FormTextAreaContainer>
+              <FormButton type="submit">Send Message</FormButton>
+            </ContactForm>
           </ContactContent>
-
-          <ContactForm onSubmit={handleSubmit(onSubmitForm)}>
-            {successForm}
-            <FormInputContainer>
-              <FormLabel>Name</FormLabel>
-              <FormInput
-                errors={errors?.name}
-                type="text"
-                placeholder="Insert your name"
-                autoComplete="off"
-                ref={register}
-                {...register("name", {
-                  required: {
-                    value: true,
-                    message: "Please enter your name",
-                  },
-                })}
-                name="name"
-              />
-              <FormError>{errors?.name?.message}</FormError>
-            </FormInputContainer>
-
-            <FormInputContainer>
-              <FormLabel>Mail</FormLabel>
-              <FormInput
-                errors={errors?.email}
-                type="email"
-                placeholder="Insert your email"
-                autoComplete="off"
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "Please enter your email",
-                  },
-                  pattern: {
-                    value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]+$/i,
-                    message: "This need to be a valid email address",
-                  },
-                })}
-                name="email"
-              />
-              <FormError>{errors?.email?.message}</FormError>
-            </FormInputContainer>
-
-            <FormTextAreaContainer errors={errors?.message}>
-              <FormLabel>Message</FormLabel>
-              <textarea
-                placeholder="Write your message"
-                autoComplete="off"
-                cols="30"
-                rows="10"
-                name="message"
-                {...register("message", {
-                  required: {
-                    value: true,
-                    message: "What's on Your Mind ??!",
-                  },
-                })}
-              ></textarea>
-              <FormError>{errors?.message?.message}</FormError>
-            </FormTextAreaContainer>
-            <FormButton type="submit">Send Message</FormButton>
-          </ContactForm>
         </ContactContainer>
       </Container>
     </Section>
