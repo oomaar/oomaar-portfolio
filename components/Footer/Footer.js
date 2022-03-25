@@ -33,10 +33,10 @@ export const Footer = ({ data }) => {
           <FooterList>{footerLinks}</FooterList>
           <FooterSocialList>{footerSocialLinks}</FooterSocialList>
         </Container>
+        <FooterCopy>
+          &copy; Designed and Developed by <span>Omar Hassan</span>
+        </FooterCopy>
       </FooterContainer>
-      <FooterCopy>
-        &copy; Designed and Developed by <span>Omar Hassan</span>
-      </FooterCopy>
     </FooterTag>
   );
 };
