@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tabletScreen } from "../../global/GlobalStyle";
 
 export const ContactContainer = styled.div`
   display: grid;
@@ -17,6 +18,11 @@ export const ContactTitle = styled.h3`
 export const ContactInfo = styled.div`
   display: grid;
   gap: 1rem;
+
+  @media screen and (min-width: ${tabletScreen}) {
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
 `;
 
 export const ContactCard = styled.div`
@@ -68,6 +74,11 @@ export const ContactForm = styled.form`
   box-shadow: ${({ theme }) => theme.colors.containerShadow};
   padding: 1rem;
   border-radius: 1rem;
+
+  @media screen and (min-width: ${tabletScreen}) {
+    width: 360px;
+    margin: 0 auto;
+  }
 `;
 
 export const FormInputContainer = styled.div`
