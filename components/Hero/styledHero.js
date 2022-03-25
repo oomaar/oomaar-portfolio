@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  largeScreen,
-  light,
-  mobileScreen,
-  primaryHue,
-  saturation,
-} from "../../global/GlobalStyle";
+import { largeScreen, mobileScreen } from "../../global/GlobalStyle";
 
 export const HeroContainer = styled.section`
   display: grid;

@@ -76,9 +76,7 @@ export const Contact = ({ data }) => {
   const successForm = (
     <FormSuccess confirmForm={confirmForm}>
       <FormSuccessContainer>
-        <FormSuccessTitle>
-          Thank you for contacting me, I will be in touch soon.
-        </FormSuccessTitle>
+        <h3>Thank you for contacting me, I will be in touch soon.</h3>
         <FormButton onClick={() => setConfirmForm(false)}>Close</FormButton>
       </FormSuccessContainer>
     </FormSuccess>
@@ -90,12 +88,12 @@ export const Contact = ({ data }) => {
       <SectionTitle>Contact Me</SectionTitle>
       <Container>
         <ContactContainer>
-          <ContactContent>
+          <div>
             <ContactTitle>Talk to me</ContactTitle>
             <ContactInfo>{contactCards}</ContactInfo>
-          </ContactContent>
+          </div>
 
-          <ContactContent>
+          <div>
             <ContactTitle>Write to me your project</ContactTitle>
 
             <ContactForm onSubmit={handleSubmit(onSubmitForm)}>
@@ -160,7 +158,7 @@ export const Contact = ({ data }) => {
               </FormTextAreaContainer>
               <FormButton type="submit">Send Message</FormButton>
             </ContactForm>
-          </ContactContent>
+          </div>
         </ContactContainer>
       </Container>
     </Section>

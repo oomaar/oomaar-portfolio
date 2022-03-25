@@ -34,66 +34,6 @@
       }
     ]
   },
-  "sidebar": {
-    "links": [
-      {
-        "id": "nav-link-1",
-        "title": "Home",
-        "href": "#home"
-      },
-      {
-        "id": "nav-link-2",
-        "title": "About",
-        "href": "#about"
-      },
-      {
-        "id": "nav-link-3",
-        "title": "Qualification",
-        "href": "#qualification"
-      },
-      {
-        "id": "nav-link-4",
-        "title": "Skills",
-        "href": "#skills"
-      },
-      {
-        "id": "nav-link-5",
-        "title": "Projects",
-        "href": "#projects"
-      },
-      {
-        "id": "nav-link-6",
-        "title": "Contact",
-        "href": "#contact"
-      }
-    ]
-  },
-  "socialMedia": [
-    {
-      "id": 1,
-      "title": "github",
-      "icon": "/social/github-sign.png",
-      "link": "https://github.com/oomaar"
-    },
-    {
-      "id": 2,
-      "title": "linkedin",
-      "icon": "/social/in.png",
-      "link": "https://www.linkedin.com/in/omar-hassan-8b1869137/"
-    },
-    {
-      "id": 3,
-      "title": "facebook",
-      "icon": "/social/facebook-app-logo.png",
-      "link": "https://www.facebook.com/omarhassan16694"
-    },
-    {
-      "id": 4,
-      "title": "instagram",
-      "icon": "/social/instagram-symbol.png",
-      "link": "https://www.instagram.com/omaar_sk/"
-    }
-  ],
   "hero": {
     "profession": "Frontend Developer",
     "name": "Omar Hassan",

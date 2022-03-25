@@ -21,8 +21,6 @@ export const ContactContainer = styled.div`
   }
 `;
 
-export const ContactContent = styled.div``;
-
 export const ContactTitle = styled.h3`
   text-align: center;
   font-size: ${({ theme }) => theme.font.h3Font};
@@ -223,5 +221,3 @@ export const FormSuccessContainer = styled.div`
   display: grid;
   gap: 3rem 0;
 `;
-
-export const FormSuccessTitle = styled.h3``;

@@ -5,7 +5,6 @@ import {
   navbarHeight,
   primaryHue,
   saturation,
-  secondaryHue,
   tabletScreen,
 } from "../../global/GlobalStyle";
 
@@ -69,13 +68,6 @@ export const NavbarList = styled.ul`
   justify-content: space-between;
   align-items: center;
   padding: 0;
-`;
-
-export const NavbarItem = styled.li`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 `;
 
 export const NavbarLink = styled.a`

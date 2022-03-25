@@ -6,7 +6,6 @@ import {
   NavThemeButton,
   NavMenu,
   NavbarList,
-  NavbarItem,
   NavbarLink,
 } from "./styledNavbar";
 
@@ -22,7 +21,7 @@ export const Navbar = ({ data, toggleTheme, checkTheme }) => {
   }, []);
 
   const navbarLinks = data.links.map((link) => (
-    <NavbarItem key={link.id}>
+    <li key={link.id}>
       <NavbarLink
         href={link.href}
         onClick={() => setActiveLink(link.id)}
@@ -31,7 +30,7 @@ export const Navbar = ({ data, toggleTheme, checkTheme }) => {
         <i className={link.icon}></i>
       </NavbarLink>
       {/* <p>{link.title}</p> */}
-    </NavbarItem>
+    </li>
   ));
 
   return (
@@ -43,21 +42,9 @@ export const Navbar = ({ data, toggleTheme, checkTheme }) => {
         </NavMenu>
         <NavThemeButton>
           {toggleTheme === "dark" ? (
-            <i
-              className="bx bx-sun"
-              onClick={() => {
-                checkTheme();
-                // localStorage.setItem("omars-dark-value", "light");
-              }}
-            ></i>
+            <i className="bx bx-sun" onClick={checkTheme}></i>
           ) : (
-            <i
-              className="bx bx-moon"
-              onClick={() => {
-                checkTheme();
-                // localStorage.setItem("omars-dark-value", "dark");
-              }}
-            ></i>
+            <i className="bx bx-moon" onClick={checkTheme}></i>
           )}
         </NavThemeButton>
       </Nav>
