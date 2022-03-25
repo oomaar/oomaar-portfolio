@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { secondaryHue } from "../../global/GlobalStyle";
+import { largeScreen, secondaryHue } from "../../global/GlobalStyle";
 
 export const FooterTag = styled.footer`
   background-color: ${({ theme }) => theme.colors.firstColor};
@@ -41,6 +41,12 @@ export const FooterSocialLink = styled.a`
   border-radius: 0.25rem;
   font-size: 1rem;
   display: inline-flex;
+
+  @media screen and (min-width: ${largeScreen}) {
+    font-size: 1.25rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+  }
 `;
 
 export const FooterCopy = styled.span`
