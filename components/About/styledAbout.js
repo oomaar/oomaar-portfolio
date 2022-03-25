@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tabletScreen } from "../../global/GlobalStyle";
+import { largeScreen, tabletScreen } from "../../global/GlobalStyle";
 
 export const AboutContainer = styled.div`
   display: grid;
@@ -9,11 +9,24 @@ export const AboutContainer = styled.div`
     width: 220px;
     border-radius: 1.5rem;
     justify-self: center;
+
+    @media screen and (min-width: ${largeScreen}) {
+      width: 350px;
+    }
+  }
+
+  @media screen and (min-width: ${largeScreen}) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 `;
 
 export const AboutData = styled.div`
   text-align: center;
+
+  @media screen and (min-width: ${largeScreen}) {
+    text-align: initial;
+  }
 `;
 
 export const AboutInfo = styled.div`
@@ -23,6 +36,11 @@ export const AboutInfo = styled.div`
 
     @media screen and (min-width: ${tabletScreen}) {
       padding: 0 5rem;
+    }
+
+    @media screen and (min-width: ${largeScreen}) {
+      padding: 0 4rem 0 0;
+      margin-bottom: 2.5rem;
     }
 
     span {
