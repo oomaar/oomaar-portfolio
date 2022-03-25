@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  largeScreen,
   light,
   navbarHeight,
   primaryHue,
@@ -26,6 +27,10 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+
+  @media screen and (min-width: ${largeScreen}) {
+    height: calc(${navbarHeight} + 1rem);
+  }
 `;
 
 export const Logo = styled.h1`
