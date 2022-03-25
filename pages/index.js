@@ -41,7 +41,7 @@ export default function Home() {
         <Projects data={portfolioData.projects} />
         <Contact data={portfolioData.contact} />
       </Main>
-      {/* <Footer data={portfolioData.footer} /> */}
+      <Footer data={portfolioData.footer} />
     </div>
   );
 }
