@@ -15,7 +15,7 @@ import {
 
 export const Hero = ({ data }) => {
   const socialLinks = data.socialLinks.map((link) => (
-    <HeroSocialLink key={link.id} href={link.href}>
+    <HeroSocialLink key={link.id} href={link.href} target="_blank">
       <i className={link.icon}></i>
     </HeroSocialLink>
   ));
