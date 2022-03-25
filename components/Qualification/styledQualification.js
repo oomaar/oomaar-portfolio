@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tabletScreen } from "../../global/GlobalStyle";
+import { largeScreen, tabletScreen } from "../../global/GlobalStyle";
 
 export const QualificationContainer = styled.div`
   display: grid;
@@ -27,6 +27,12 @@ export const QualificationCardsContainer = styled.ul`
   @media screen and (min-width: ${tabletScreen}) {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  @media screen and (min-width: ${largeScreen}) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 3rem;
+    justify-content: center;
   }
 `;
 
