@@ -2,6 +2,10 @@ import styled, { createGlobalStyle } from "styled-components";
 
 // Navbar Height
 export const navbarHeight = `3.5rem`;
+
+// Transition
+export const transition = `all 0.4s ease-in`;
+
 // View Ports
 export const mobileScreen = `320px`;
 export const tabletScreen = `576px`;
@@ -145,7 +149,7 @@ export const Button = styled.a`
   border-radius: ${({ link }) => (link ? "0rem" : "0.5rem")};
   font-weight: ${({ theme, link }) =>
     link ? theme.weight.bold : theme.weight.medium};
-  transition: all 0.4s ease-in;
+  transition: ${transition};
   cursor: pointer;
 
   :hover {
@@ -173,7 +177,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.textColor};
     font-family: ${({ theme }) => theme.font.bodyFont};
     font-size: ${({ theme }) => theme.font.normalFont};
-    transition: all 0.4s ease-in;
+    transition: ${transition};
 
     @media screen and (min-width: 968px) {
         font-size: 1rem;
@@ -222,6 +226,7 @@ export const GlobalStyle = createGlobalStyle`
     height: auto;
     max-width: 100%;
   }
+
   /* Scroll Bar */
   ::-webkit-scrollbar {
     width: 0.6rem;

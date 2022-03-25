@@ -6,6 +6,7 @@ import {
   primaryHue,
   saturation,
   tabletScreen,
+  transition,
 } from "../../global/GlobalStyle";
 
 export const Header = styled.header`
@@ -17,7 +18,7 @@ export const Header = styled.header`
   z-index: ${({ theme }) => theme.zIndex.zFixed};
   box-shadow: ${({ navShadow, theme }) =>
     navShadow && theme.colors.navShadowColor};
-  transition: all 0.4s ease-in;
+  transition: ${transition};
 `;
 
 export const Nav = styled.nav`
@@ -35,7 +36,7 @@ export const Nav = styled.nav`
 export const Logo = styled.h1`
   color: ${({ theme }) => theme.colors.firstColor};
   font-weight: ${({ theme }) => theme.weight.medium};
-  transition: all 0.4s ease-in-out;
+  transition: ${transition};
 
   :hover {
     color: ${({ theme }) => theme.colors.firstColorAlt};
@@ -53,7 +54,7 @@ export const NavMenu = styled.div`
   border-radius: 4rem;
   padding: 0.1rem 1.25rem;
   backdrop-filter: blur(10px);
-  transition: all 0.4s ease-in;
+  transition: ${transition};
 
   @media screen and (min-width: ${tabletScreen}) {
     width: 328px;
@@ -91,7 +92,7 @@ export const NavbarLink = styled.a`
 export const NavThemeButton = styled.div`
   font-size: 1.25rem;
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: ${transition};
 
   :hover {
     color: ${({ theme }) => theme.colors.firstColor};

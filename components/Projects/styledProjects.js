@@ -4,6 +4,7 @@ import {
   largeScreen,
   mobileScreen,
   tabletScreen,
+  transition,
 } from "../../global/GlobalStyle";
 
 export const ProjectsNav = styled.nav`
@@ -106,7 +107,7 @@ export const ProjectsCardButton = styled.a`
 
   i {
     font-size: 1rem;
-    transition: all 0.4s ease-in;
+    transition: ${transition};
   }
 
   :hover i {

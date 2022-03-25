@@ -3,6 +3,7 @@ import {
   laptopScreen,
   largeScreen,
   tabletScreen,
+  transition,
 } from "../../global/GlobalStyle";
 
 export const ContactContainer = styled.div`
@@ -76,7 +77,7 @@ export const ContactButton = styled.a`
 
   i {
     font-size: 1.1rem;
-    transition: all 0.4s ease-in;
+    transition: ${transition};
     margin-top: 0.27rem;
     color: ${({ theme }) => theme.colors.firstColor};
   }
@@ -179,7 +180,7 @@ export const FormButton = styled.button`
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-weight: ${({ theme }) => theme.weight.medium};
-  transition: all 0.4s ease-in;
+  transition: ${transition};
   cursor: pointer;
 
   :hover {
@@ -210,7 +211,7 @@ export const FormSuccess = styled.div`
   opacity: ${({ confirmForm }) => (confirmForm ? "1" : "0")};
   transform: ${({ confirmForm }) =>
     confirmForm ? "translateX(0)" : "translateX(1000vw)"};
-  transition: all 0.4s ease-in;
+  transition: ${transition};
 `;
 
 export const FormSuccessContainer = styled.div`

@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { largeScreen, mobileScreen } from "../../global/GlobalStyle";
+import {
+  largeScreen,
+  mobileScreen,
+  transition,
+} from "../../global/GlobalStyle";
 
 export const HeroContainer = styled.section`
   display: grid;
@@ -96,7 +100,7 @@ export const HeroSocialLink = styled.a`
   border-radius: 0.25rem;
   font-size: 1.2rem;
   display: flex;
-  transition: all 0.4s ease-in;
+  transition: ${transition};
 
   :hover {
     background-color: ${({ theme }) => theme.colors.firstColor};
