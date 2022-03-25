@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SkillsContainer = styled.div`
   display: grid;
   gap: 1.5rem 2rem;
+  justify-content: center;
 `;
 
 export const SkillsContent = styled.div`
