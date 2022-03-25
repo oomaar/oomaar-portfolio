@@ -1,10 +1,19 @@
 import styled from "styled-components";
-import { mobileScreen, tabletScreen } from "../../global/GlobalStyle";
+import {
+  largeScreen,
+  mobileScreen,
+  tabletScreen,
+} from "../../global/GlobalStyle";
 
 export const SkillsContainer = styled.div`
   display: grid;
   gap: 1.5rem 2rem;
   justify-content: center;
+
+  @media screen and (min-width: ${largeScreen}) {
+    grid-template-columns: repeat(2, 350px);
+    gap: 1.5rem 3rem;
+  }
 `;
 
 export const SkillsContent = styled.div`
