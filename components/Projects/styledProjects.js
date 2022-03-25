@@ -1,14 +1,5 @@
-import styled, { keyframes } from "styled-components";
-
-const animate = keyframes`
-  from {
-    transform: scale(1);
-  }
-  
-  to {
-    transform: scale(0);
-  }
-`;
+import styled from "styled-components";
+import { mobileScreen } from "../../global/GlobalStyle";
 
 export const ProjectsNav = styled.nav`
   display: flex;
@@ -16,6 +7,10 @@ export const ProjectsNav = styled.nav`
   align-items: center;
   column-gap: 0.75rem;
   margin-bottom: 2rem;
+
+  @media screen and (max-width: ${mobileScreen}) {
+    column-gap: 0.25rem;
+  }
 `;
 
 export const ProjectsNavLink = styled.span`
@@ -28,6 +23,10 @@ export const ProjectsNavLink = styled.span`
   &.active {
     color: ${({ theme }) => theme.colors.linksAndButtonsColor};
     background-color: ${({ theme }) => theme.colors.firstColor};
+  }
+
+  @media screen and (max-width: ${mobileScreen}) {
+    font-size: ${({ theme }) => theme.font.smallFont};
   }
 `;
 
