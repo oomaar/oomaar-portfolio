@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  largeScreen,
   light,
   mobileScreen,
   primaryHue,
@@ -55,6 +56,10 @@ export const HeroImage = styled.div`
   @media screen and (max-width: ${mobileScreen}) {
     width: 150px;
   }
+
+  @media screen and (min-width: ${largeScreen}) {
+    width: 290px;
+  }
 `;
 
 export const HeroSocial = styled.div`
@@ -70,6 +75,10 @@ export const HeroSocial = styled.div`
     border-radius: 10rem;
     background-color: ${({ theme }) => theme.colors.heroSocialAfter};
     transform: rotate(90deg) translate(16px, 3px);
+
+    @media screen and (min-width: ${largeScreen}) {
+      transform: rotate(90deg) translate(16px);
+    }
   }
 `;
 
@@ -86,6 +95,11 @@ export const HeroSocialLink = styled.a`
   :hover {
     background-color: ${({ theme }) => theme.colors.firstColor};
     color: #fff;
+  }
+
+  @media screen and (min-width: ${largeScreen}) {
+    padding: 0.4rem;
+    font-size: 1.25rem;
   }
 `;
 
@@ -106,4 +120,8 @@ export const HomeScroll = styled.a`
 
 export const HomeScrollIcon = styled.div`
   font-size: 1.25rem;
+
+  @media screen and (min-width: ${largeScreen}) {
+    font-size: 2rem;
+  }
 `;
