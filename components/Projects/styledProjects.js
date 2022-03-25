@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mobileScreen } from "../../global/GlobalStyle";
+import { mobileScreen, tabletScreen } from "../../global/GlobalStyle";
 
 export const ProjectsNav = styled.nav`
   display: flex;
@@ -34,6 +34,10 @@ export const ProjectsContainer = styled.div`
   display: grid;
   gap: 1.5rem;
   padding-top: 1rem;
+
+  @media screen and (min-width: ${tabletScreen}) {
+    justify-content: center;
+  }
 `;
 
 export const ProjectsCard = styled.div`
@@ -45,6 +49,10 @@ export const ProjectsCard = styled.div`
   img {
     border-radius: 1rem;
     margin-bottom: 0.75rem;
+
+    @media screen and (min-width: ${tabletScreen}) {
+      width: 295px;
+    }
   }
 `;
 
