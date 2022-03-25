@@ -16,6 +16,7 @@ export const Header = styled.header`
   z-index: ${({ theme }) => theme.zIndex.zFixed};
   box-shadow: ${({ navShadow, theme }) =>
     navShadow && theme.colors.navShadowColor};
+  transition: all 0.4s ease-in;
 `;
 
 export const Nav = styled.nav`
@@ -47,6 +48,7 @@ export const NavMenu = styled.div`
   border-radius: 4rem;
   padding: 0.1rem 1.25rem;
   backdrop-filter: blur(10px);
+  transition: all 0.4s ease-in;
 `;
 
 export const NavbarList = styled.ul`

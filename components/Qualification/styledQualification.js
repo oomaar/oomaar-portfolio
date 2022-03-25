@@ -9,6 +9,7 @@ export const QualificationNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 3px solid transparent;
 
   .active {
     border-bottom: 3px solid ${({ theme }) => theme.colors.firstColor};

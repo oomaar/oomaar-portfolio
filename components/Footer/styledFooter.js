@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { secondaryHue } from "../../global/GlobalStyle";
 
 export const FooterTag = styled.footer`
   background-color: ${({ theme }) => theme.colors.firstColor};
@@ -9,7 +10,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const FooterTitle = styled.h1`
-  color: ${({ theme }) => theme.colors.titleColor};
+  color: hsl(${secondaryHue}, 15%, 15%);
   text-align: center;
   margin-bottom: 2rem;
 `;
@@ -23,7 +24,7 @@ export const FooterList = styled.ul`
 `;
 
 export const FooterLink = styled.a`
-  color: ${({ theme }) => theme.colors.titleColor};
+  color: hsl(${secondaryHue}, 15%, 15%);
 `;
 
 export const FooterSocialList = styled.ul`
@@ -34,8 +35,8 @@ export const FooterSocialList = styled.ul`
 `;
 
 export const FooterSocialLink = styled.a`
-  background-color: ${({ theme }) => theme.colors.bodyColor};
-  color: ${({ theme }) => theme.colors.titleColor};
+  background-color: hsl(${secondaryHue}, 15%, 15%);
+  color: ${({ theme }) => theme.colors.firstColor};
   padding: 0.25rem;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -45,12 +46,12 @@ export const FooterSocialLink = styled.a`
 export const FooterCopy = styled.span`
   display: block;
   margin-top: 4.5rem;
-  color: ${({ theme }) => theme.colors.titleColor};
+  color: #000;
   text-align: center;
   font-size: ${({ theme }) => theme.font.smallerFont};
 
   span {
     font-size: ${({ theme }) => theme.font.normalFont};
-    color: #000;
+    color: #fff;
   }
 `;

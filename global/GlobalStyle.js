@@ -28,6 +28,9 @@ export const lightTheme = {
     linksAndButtonsColor: `hsl(${secondaryHue}, 15%, 15%)`,
     containerShadow: `0 2px 16px hsla(${secondaryHue}, 48%, 8%, 0.1)`,
     iconColor: `hsl(${secondaryHue}, 15%, 15%)`,
+    scrollBarColor: `hsl(${secondaryHue}, 8%, 66%)`,
+    scrollBarThumb: `hsl(${secondaryHue}, 8%, 54%)`,
+    scrollBarThumbHover: `hsl(${secondaryHue}, 8%, 44%)`,
   },
 };
 
@@ -48,6 +51,9 @@ export const darkTheme = {
     linksAndButtonsColor: `#fff`,
     containerShadow: ``,
     iconColor: `hsl(${primaryHue}, ${saturation}, ${light})`,
+    scrollBarColor: `hsl(${secondaryHue}, 8%, 38%)`,
+    scrollBarThumb: `hsl(${secondaryHue}, 8%, 26%)`,
+    scrollBarThumbHover: `hsl(${secondaryHue}, 8%, 20%)`,
   },
 };
 
@@ -147,6 +153,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.textColor};
     font-family: ${({ theme }) => theme.font.bodyFont};
     font-size: ${({ theme }) => theme.font.normalFont};
+    transition: all 0.4s ease-in;
   }
 
   button {
@@ -187,15 +194,15 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 0.6rem;
     border-radius: 0.5rem;
-    background-color: hsl(${secondaryHue}, 8%, 38%);
+    background-color: ${({ theme }) => theme.colors.scrollBarColor};
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: hsl(${secondaryHue}, 8%, 26%);
+    background-color: ${({ theme }) => theme.colors.scrollBarThumb};
     border-radius: 0.5rem;
 
     :hover {
-    background-color: hsl(${secondaryHue}, 8%, 20%);
+    background-color: ${({ theme }) => theme.colors.scrollBarThumbHover};
     }
   }
 
