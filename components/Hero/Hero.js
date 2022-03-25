@@ -31,7 +31,7 @@ export const Hero = ({ data }) => {
             <HeroTitle>{data.profession}</HeroTitle>
           </HeroData>
           <HeroButtons>
-            <Button ghost download="" href="/pdf/Omar-Hassan-CV-2022.pdf">
+            <Button ghost download={true} href="/pdf/Omar-Hassan-CV-2022.pdf">
               Download CV
             </Button>
             <Button href="#about">About Me</Button>
