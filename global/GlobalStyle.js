@@ -5,6 +5,7 @@ export const navbarHeight = `3.5rem`;
 // View Ports
 export const mobileScreen = `320px`;
 export const tabletScreen = `576px`;
+export const laptopScreen = `767px`;
 
 // Colors Constants
 export const primaryHue = 250;
