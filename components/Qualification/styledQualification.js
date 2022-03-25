@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tabletScreen } from "../../global/GlobalStyle";
 
 export const QualificationContainer = styled.div`
   display: grid;
@@ -22,6 +23,11 @@ export const QualificationCardsContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem 0;
+
+  @media screen and (min-width: ${tabletScreen}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 `;
 
 export const QualificationCard = styled.li`
@@ -33,6 +39,10 @@ export const QualificationCard = styled.li`
   border-radius: 1rem;
   background: ${({ theme }) => theme.colors.containerColor};
   box-shadow: ${({ theme }) => theme.colors.containerShadow};
+
+  @media screen and (min-width: ${tabletScreen}) {
+    text-align: center;
+  }
 `;
 
 export const QualificationTitle = styled.h3`
