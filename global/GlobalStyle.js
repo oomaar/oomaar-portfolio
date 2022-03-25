@@ -15,14 +15,40 @@ export const lightTheme = {
   colors: {
     firstColor: `hsl(${primaryHue}, ${saturation}, ${light})`,
     firstColorAlt: `hsl(${primaryHue}, ${saturation}, 71%)`,
+    titleColor: `hsl(${secondaryHue}, 15%, 15%)`,
+    textColor: `hsl(${secondaryHue}, 8%, 35%)`,
+    textColorLight: `hsl(${secondaryHue}, 4%, 55%)`,
+    bodyColor: `hsl(${secondaryHue}, 100%, 99%)`,
+    containerColor: `hsl(${secondaryHue}, 100%, 100%)`,
+    navColor: `hsla(${secondaryHue}, 32%, 90%, 0.8)`,
+    navShadowColor: `0 2px 4px hsla(0, 0%, 1%, 0.1)`,
+    sectionSubtitleColor: `hsl(${secondaryHue}, 8%, 35%)`,
+    heroSocialShadow: `0 2px 8px hsla(${secondaryHue}, "48%", "8%", 0.1)`,
+    heroSocialAfter: `hsl(${secondaryHue}, 15%, 15%)`,
+    linksAndButtonsColor: `hsl(${secondaryHue}, 15%, 15%)`,
+    containerShaodw: `0 2px 16px hsla(${secondaryHue}, 48%, 8%, 0.1)`,
+  },
+};
+
+export const darkTheme = {
+  colors: {
+    firstColor: `hsl(${primaryHue}, ${saturation}, ${light})`,
+    firstColorAlt: `hsl(${primaryHue}, ${saturation}, 71%)`,
     titleColor: `hsl(${secondaryHue}, 15%, 95%)`,
     textColor: `hsl(${secondaryHue}, 8%, 75%)`,
     textColorLight: `hsl(${secondaryHue}, 4%, 55%)`,
     bodyColor: `hsl(${secondaryHue}, 48%, 8%)`,
     containerColor: `hsl(${secondaryHue}, 32%, 12%)`,
+    navColor: `hsla(${secondaryHue}, 32%, 16%, 0.8)`,
+    navShadowColor: `0 4px 4px hsla(0, 0%, 4%, 0.3)`,
+    sectionSubtitleColor: `hsl(${secondaryHue}, 4%, 55%)`,
+    heroSocialShadow: ``,
+    heroSocialAfter: `hsl(${primaryHue}, ${saturation}, ${light})`,
+    linksAndButtonsColor: `hsl(${primaryHue}, ${saturation}, ${light})`,
+    containerShaodw: ``,
   },
 };
-export const darkTheme = {};
+
 export const theme = {
   font: {
     bodyFont: `'Karla', sans-serif`,
@@ -73,7 +99,7 @@ export const SectionSubTitle = styled.span`
   text-align: center;
   display: block;
   font-size: ${({ theme }) => theme.font.smallerFont};
-  color: ${({ theme }) => theme.colors.textColorLight};
+  color: ${({ theme }) => theme.colors.sectionSubtitleColor};
 `;
 
 // Buttons
