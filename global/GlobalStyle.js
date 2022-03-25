@@ -154,4 +154,18 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
   /* Scroll Bar */
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: hsl(${secondaryHue}, 8%, 38%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(${secondaryHue}, 8%, 26%);
+    border-radius: 0.5rem;
+
+    :hover {
+    background-color: hsl(${secondaryHue}, 8%, 20%);
+    }
+  }
 `;
