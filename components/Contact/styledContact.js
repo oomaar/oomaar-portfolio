@@ -102,7 +102,8 @@ export const FormInput = styled.input`
   left: 0;
   width: 100%;
   height: 50%;
-  border: 2px solid ${({ theme }) => theme.colors.textColorLight};
+  border: 2px solid
+    ${({ theme, errors }) => (errors ? "#ff6b6b" : theme.colors.textColorLight)};
   background: none;
   outline: 0;
   padding: 1.5rem;
@@ -122,7 +123,9 @@ export const FormTextAreaContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid ${({ theme }) => theme.colors.textColorLight};
+    border: 2px solid
+      ${({ theme, errors }) =>
+        errors ? "#ff6b6b" : theme.colors.textColorLight};
     background: none;
     outline: 0;
     padding: 1.5rem;
@@ -147,4 +150,11 @@ export const FormButton = styled.button`
     background-color: ${({ theme }) => theme.colors.firstColorAlt};
     color: ${({ theme }) => theme.colors.bodyColor};
   }
+`;
+
+export const FormError = styled.span`
+  position: absolute;
+  top: 105%;
+  left: 35%;
+  color: #ff6b6b;
 `;

@@ -22,7 +22,9 @@ import {
   FormInput,
   FormTextAreaContainer,
   FormButton,
+  FormError,
 } from "./styledContact";
+import { useState } from "react";
 
 export const Contact = ({ data }) => {
   const {
@@ -98,6 +100,7 @@ export const Contact = ({ data }) => {
             <FormInputContainer>
               <FormLabel>Name</FormLabel>
               <FormInput
+                errors={errors?.name}
                 type="text"
                 placeholder="Insert your name"
                 autoComplete="off"
@@ -110,12 +113,13 @@ export const Contact = ({ data }) => {
                 })}
                 name="name"
               />
-              <span>{errors?.name?.message}</span>
+              <FormError>{errors?.name?.message}</FormError>
             </FormInputContainer>
 
             <FormInputContainer>
               <FormLabel>Mail</FormLabel>
               <FormInput
+                errors={errors?.email}
                 type="email"
                 placeholder="Insert your email"
                 autoComplete="off"
@@ -131,10 +135,10 @@ export const Contact = ({ data }) => {
                 })}
                 name="email"
               />
-              <span>{errors?.email?.message}</span>
+              <FormError>{errors?.email?.message}</FormError>
             </FormInputContainer>
 
-            <FormTextAreaContainer>
+            <FormTextAreaContainer errors={errors?.message}>
               <FormLabel>Message</FormLabel>
               <textarea
                 placeholder="Write your message"
@@ -149,7 +153,7 @@ export const Contact = ({ data }) => {
                   },
                 })}
               ></textarea>
-              <span>{errors?.message?.message}</span>
+              <FormError>{errors?.message?.message}</FormError>
             </FormTextAreaContainer>
             <FormButton type="submit">Send Message</FormButton>
           </ContactForm>
