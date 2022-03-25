@@ -5,6 +5,7 @@ import {
   primaryHue,
   saturation,
   secondaryHue,
+  tabletScreen,
 } from "../../global/GlobalStyle";
 
 export const Header = styled.header`
@@ -49,6 +50,13 @@ export const NavMenu = styled.div`
   padding: 0.1rem 1.25rem;
   backdrop-filter: blur(10px);
   transition: all 0.4s ease-in;
+
+  @media screen and (min-width: ${tabletScreen}) {
+    width: 328px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 `;
 
 export const NavbarList = styled.ul`
