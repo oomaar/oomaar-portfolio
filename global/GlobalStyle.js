@@ -168,4 +168,10 @@ export const GlobalStyle = createGlobalStyle`
     background-color: hsl(${secondaryHue}, 8%, 20%);
     }
   }
+
+  /* Text Highlight */
+  ::selection {
+    background-color: ${({ theme }) => theme.colors.firstColor};
+    color: #000;
+  }
 `;
