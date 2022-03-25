@@ -16,15 +16,15 @@
       },
       {
         "id": "nav-link-3",
-        "title": "Qualification",
-        "href": "#qualification",
-        "icon": "bx bx-briefcase-alt-2"
-      },
-      {
-        "id": "nav-link-4",
         "title": "Skills",
         "href": "#skills",
         "icon": "bx bx-book"
+      },
+      {
+        "id": "nav-link-4",
+        "title": "Qualification",
+        "href": "#qualification",
+        "icon": "bx bx-briefcase-alt-2"
       },
       {
         "id": "nav-link-5",
