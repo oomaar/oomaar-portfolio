@@ -1,10 +1,16 @@
 import styled from "styled-components";
-import { tabletScreen } from "../../global/GlobalStyle";
+import { laptopScreen, tabletScreen } from "../../global/GlobalStyle";
 
 export const ContactContainer = styled.div`
   display: grid;
   gap: 3rem 1.5rem;
   padding-bottom: 3rem;
+
+  @media screen and (min-width: ${laptopScreen}) {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    gap: 3rem;
+  }
 `;
 
 export const ContactContent = styled.div``;
