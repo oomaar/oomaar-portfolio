@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobileScreen } from "../../global/GlobalStyle";
 
 export const SkillsContainer = styled.div`
   display: grid;
@@ -25,6 +26,10 @@ export const SkillsBox = styled.div`
   display: flex;
   justify-content: center;
   column-gap: 2.5rem;
+
+  @media screen and (max-width: ${mobileScreen}) {
+    column-gap: 1rem;
+  }
 `;
 
 export const SkillsGroup = styled.div`
@@ -50,9 +55,13 @@ export const SkillsData = styled.div`
 `;
 
 export const SkillsName = styled.h3`
-  font-size: ${({ theme }) => theme.colors.normalFont};
+  font-size: ${({ theme }) => theme.font.normalFont};
   font-weight: ${({ theme }) => theme.font.fontMedium};
   line-height: 18px;
+
+  @media screen and (max-width: ${mobileScreen}) {
+    font-size: ${({ theme }) => theme.font.smallFont};
+  }
 `;
 
 export const SkillsLevel = styled.span`
