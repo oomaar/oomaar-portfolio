@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
   laptopScreen,
+  largeScreen,
   mobileScreen,
   tabletScreen,
 } from "../../global/GlobalStyle";
@@ -46,6 +47,10 @@ export const ProjectsContainer = styled.div`
   @media screen and (min-width: ${laptopScreen}) {
     grid-template-columns: repeat(2, max-content);
   }
+
+  @media screen and (min-width: ${largeScreen}) {
+    gap: 3rem;
+  }
 `;
 
 export const ProjectsCard = styled.div`
@@ -65,6 +70,14 @@ export const ProjectsCard = styled.div`
     @media screen and (min-width: ${laptopScreen}) {
       height: 200px;
     }
+
+    @media screen and (min-width: ${largeScreen}) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: ${largeScreen}) {
+    padding: 1.25rem;
   }
 `;
 
@@ -72,6 +85,10 @@ export const ProjectsCardTitle = styled.h3`
   font-size: ${({ theme }) => theme.font.normalFontSize};
   font-weight: ${({ theme }) => theme.weight.medium};
   margin-bottom: 0.25rem;
+
+  @media screen and (min-width: ${largeScreen}) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export const ProjectsCardButton = styled.a`
@@ -90,5 +107,9 @@ export const ProjectsCardButton = styled.a`
 
   :hover i {
     transform: translateX(0.25rem);
+  }
+
+  @media screen and (min-width: ${largeScreen}) {
+    margin-top: 1.5rem;
   }
 `;
