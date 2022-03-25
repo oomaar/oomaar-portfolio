@@ -20,7 +20,7 @@ export const About = ({ data }) => {
               <p>
                 {data.info} <span>{data.infoSpan}</span> {data.info2}
               </p>
-              <Button href="#about">Contact Me</Button>
+              <Button href="#contact">Contact Me</Button>
             </AboutInfo>
           </AboutData>
         </AboutContainer>
