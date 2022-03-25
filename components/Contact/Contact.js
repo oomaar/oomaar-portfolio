@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import {
-  Button,
   Container,
   Section,
   SectionSubTitle,
@@ -23,14 +23,17 @@ import {
   FormTextAreaContainer,
   FormButton,
   FormError,
+  FormSuccess,
+  FormSuccessContainer,
+  FormSuccessTitle,
 } from "./styledContact";
-import { useState } from "react";
 
 export const Contact = ({ data }) => {
+  const [confirmForm, setConfirmForm] = useState(false);
+
   const {
     register,
     handleSubmit,
-    setError,
     reset,
     formState: { errors },
   } = useForm();
@@ -48,7 +51,8 @@ export const Contact = ({ data }) => {
     try {
       const response = await axios(config);
       if (response.status === 200) {
-        console.log("success");
+        reset();
+        setConfirmForm(true);
       }
     } catch (error) {
       console.log(
@@ -57,18 +61,6 @@ export const Contact = ({ data }) => {
       );
     }
   };
-
-  // try {
-  //   const response = await axios(config);
-  //   console.log(response);
-  //   if (response.status == 200) {
-  //     reset();
-  //     toast(
-  //       'success',
-  //       'Thank you for contacting us, we will be in touch soon.'
-  //     );
-  //   }
-  // } catch (err) {}
 
   const contactCards = data.cards.map((card) => (
     <ContactCard key={card.id}>
@@ -80,6 +72,17 @@ export const Contact = ({ data }) => {
       </ContactButton>
     </ContactCard>
   ));
+
+  const successForm = (
+    <FormSuccess confirmForm={confirmForm}>
+      <FormSuccessContainer>
+        <FormSuccessTitle>
+          Thank you for contacting me, I will be in touch soon.
+        </FormSuccessTitle>
+        <FormButton onClick={() => setConfirmForm(false)}>Close</FormButton>
+      </FormSuccessContainer>
+    </FormSuccess>
+  );
 
   return (
     <Section id="contact">
@@ -97,6 +100,7 @@ export const Contact = ({ data }) => {
           </ContactContent>
 
           <ContactForm onSubmit={handleSubmit(onSubmitForm)}>
+            {successForm}
             <FormInputContainer>
               <FormLabel>Name</FormLabel>
               <FormInput
