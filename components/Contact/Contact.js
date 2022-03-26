@@ -27,6 +27,7 @@ import {
   FormSuccessContainer,
   FormSuccessTitle,
 } from "./styledContact";
+import { SuccessForm } from "./SuccessForm/SuccessForm";
 
 export const Contact = ({ data }) => {
   const [confirmForm, setConfirmForm] = useState(false);
@@ -35,6 +36,7 @@ export const Contact = ({ data }) => {
     register,
     handleSubmit,
     reset,
+    setError,
     formState: { errors },
   } = useForm();
 
@@ -73,15 +75,6 @@ export const Contact = ({ data }) => {
     </ContactCard>
   ));
 
-  const successForm = (
-    <FormSuccess confirmForm={confirmForm}>
-      <FormSuccessContainer>
-        <h3>Thank you for contacting me, I will be in touch soon.</h3>
-        <FormButton onClick={() => setConfirmForm(false)}>Close</FormButton>
-      </FormSuccessContainer>
-    </FormSuccess>
-  );
-
   return (
     <Section id="contact">
       <SectionSubTitle>Get in touch</SectionSubTitle>
@@ -97,7 +90,10 @@ export const Contact = ({ data }) => {
             <ContactTitle>Write to me your project</ContactTitle>
 
             <ContactForm onSubmit={handleSubmit(onSubmitForm)}>
-              {successForm}
+              <SuccessForm
+                confirmForm={confirmForm}
+                setConfirmForm={setConfirmForm}
+              />
               <FormInputContainer>
                 <FormLabel>Name</FormLabel>
                 <FormInput
