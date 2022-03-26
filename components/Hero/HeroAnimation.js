@@ -6,7 +6,7 @@ export const HeroAnimation = () => (
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g opacity="0.15">
+      <g opacity="1">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -231,7 +231,7 @@ export const HeroAnimation = () => (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(301 301) rotate(90) scale(300)"
         >
-          <stop offset="0.5" stopColor="#f00" />
+          <stop offset="0.5" stopColor="#f1a11a" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <radialGradient
@@ -242,7 +242,7 @@ export const HeroAnimation = () => (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(301 301) rotate(90) scale(300)"
         >
-          <stop offset="0.5" stopColor="#f00" />
+          <stop offset="0.5" stopColor="#f1a11a" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <radialGradient
@@ -253,7 +253,7 @@ export const HeroAnimation = () => (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(301 301) rotate(90) scale(300)"
         >
-          <stop offset="0.5" stopColor="#f00" />
+          <stop offset="0.5" stopColor="#f1a11a" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <linearGradient
