@@ -269,6 +269,22 @@
         "title": "Covid-19 Tracker (ReactJS)",
         "description": "Fully Responsive covid-19 Tracker using ReactJS and Styled Components.",
         "url": "https://covid-19-tracker-16970.web.app/"
+      },
+      {
+        "id": 3,
+        "src": "/portfolio/gym.jpg",
+        "alt": "Gym Landing Page",
+        "title": "Gym Landing Page (ReactJS)",
+        "description": "Fully Responsive Gym Landing Page using ReactJS and CSS3.",
+        "url": "https://gym-landing-page-demo.netlify.app/"
+      },
+      {
+        "id": 4,
+        "src": "/portfolio/hotel.jpg",
+        "alt": "Hotel Reservation Demo",
+        "title": "Hotel Reservation Demo (ReactJS)",
+        "description": "Fully Responsive Hotel Reservation Demo using ReactJS and CSS3.",
+        "url": "https://hotel-resort-demo.netlify.app/"
       }
     ],
     "clones": [
