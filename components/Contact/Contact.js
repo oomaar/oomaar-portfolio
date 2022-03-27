@@ -43,9 +43,7 @@ export const Contact = ({ data }) => {
   const onSubmitForm = async (values) => {
     let config = {
       method: "post",
-      url:
-        `${process.env.NEXT_PUBLIC_API_URL}/api/contact` ||
-        `https://oomaar-portfolio.vercel.app/api/contact`,
+      url: `/api/contact`,
       headers: {
         "Content-Type": "application/json",
       },
