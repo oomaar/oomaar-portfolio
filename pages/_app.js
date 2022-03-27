@@ -12,20 +12,51 @@ import portfolioData from "../data/portfolioData.json";
 export default function App({ Component, pageProps }) {
   const [toggleTheme, setToggleTheme] = useState("");
 
+  // const checkTheme = () => {
+  //   if (toggleTheme === "light") {
+  //     setToggleTheme("dark");
+  //     localStorage.setItem("omars-dark-value", "dark");
+  //   } else if (toggleTheme === "dark") {
+  //     setToggleTheme("light");
+  //     localStorage.setItem("omars-dark-value", "light");
+  //   }
+  // };
+
   const checkTheme = () => {
-    if (toggleTheme === "light") {
-      setToggleTheme("dark");
-      localStorage.setItem("omars-dark-value", "dark");
-    } else if (toggleTheme === "dark") {
-      setToggleTheme("light");
-      localStorage.setItem("omars-dark-value", "light");
+    switch (toggleTheme) {
+      case "light":
+        setToggleTheme("dark");
+        localStorage.setItem("toggleTheme", "dark");
+        return document.documentElement.setAttribute("data-theme", "dark");
+
+      case "dark":
+        setToggleTheme("light");
+        localStorage.setItem("toggleTheme", "light");
+        return document.documentElement.setAttribute("data-theme", "light");
+
+      default:
+        setToggleTheme("light");
+        localStorage.setItem("toggleTheme", "light");
+        return document.documentElement.setAttribute("data-theme", "light");
     }
   };
 
+  // useEffect(() => {
+  //   const themeValue = localStorage.getItem("omars-dark-value");
+  //   setToggleTheme(themeValue);
+  // }, []);
+
   useEffect(() => {
-    const themeValue = localStorage.getItem("omars-dark-value");
-    setToggleTheme(themeValue);
-  }, []);
+    if (localStorage.getItem("toggleTheme")) {
+      setToggleTheme(localStorage.getItem("toggleTheme"));
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme")
+      );
+    } else {
+      checkTheme(null);
+    }
+  });
 
   return (
     <ThemeProvider theme={theme}>
