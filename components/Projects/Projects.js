@@ -21,7 +21,7 @@ export const Projects = ({ data }) => {
     <ProjectsCard key={work.id}>
       <img src={work.src} alt={work.alt} />
       <ProjectsCardTitle>{work.title}</ProjectsCardTitle>
-      <ProjectsCardButton href={work.url}>
+      <ProjectsCardButton href={work.url} target="_blank">
         Demo <i className="bx bx-right-arrow-alt"></i>
       </ProjectsCardButton>
     </ProjectsCard>
