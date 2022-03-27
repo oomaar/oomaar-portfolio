@@ -31,7 +31,7 @@ export const Projects = ({ data }) => {
     <ProjectsCard key={hobby.id}>
       <img src={hobby.src} alt={hobby.alt} />
       <ProjectsCardTitle>{hobby.title}</ProjectsCardTitle>
-      <ProjectsCardButton href={hobby.url}>
+      <ProjectsCardButton href={hobby.url} target="_blank">
         Demo <i className="bx bx-right-arrow-alt"></i>
       </ProjectsCardButton>
     </ProjectsCard>
@@ -41,7 +41,7 @@ export const Projects = ({ data }) => {
     <ProjectsCard key={clones.id}>
       <img src={clones.src} alt={clones.alt} />
       <ProjectsCardTitle>{clones.title}</ProjectsCardTitle>
-      <ProjectsCardButton href={clones.url}>
+      <ProjectsCardButton href={clones.url} target="_blank">
         Demo <i className="bx bx-right-arrow-alt"></i>
       </ProjectsCardButton>
     </ProjectsCard>
